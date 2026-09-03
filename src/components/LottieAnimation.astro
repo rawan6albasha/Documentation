@@ -1,0 +1,50 @@
+---
+// src/components/LottieAnimation.astro
+const { id, src } = Astro.props;
+---
+
+<!-- حاوية الأنيميشن -->
+<div id={id} class="lottie-container" data-src={src}></div>
+
+<!-- تحميل مكتبة Lottie من CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+<!-- تشغيل الأنيميشن -->
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const containers = document.querySelectorAll('.lottie-container');
+    
+    containers.forEach(container => {
+      const animSrc = container.dataset.src;
+      
+      // نتأكد من وجود الرابط، وأن المكتبة تم تحميلها، وأن العنصر لم يُهيأ مسبقاً
+      if (animSrc && typeof lottie !== 'undefined' && !container.dataset.loaded) {
+        container.dataset.loaded = "true"; // منع التكرار
+        
+        try {
+          lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: animSrc
+          });
+        } catch (error) {
+          console.error('فشل تحميل أنيميشن Lottie:', error);
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .lottie-container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 200px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

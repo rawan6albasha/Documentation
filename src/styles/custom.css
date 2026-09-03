@@ -1,0 +1,61 @@
+/* ألوان منصة عشرة الأساسية */
+:root {
+  --sl-color-accent-low: #134e48;
+  --sl-color-accent: #0d9488;
+  --sl-color-accent-high: #99f6e4;
+}
+
+/* تنسيق بطاقة الترويسة للخطوات */
+.ashara-meta-card {
+  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-gray-5);
+  border-right: 4px solid #0d9488;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Starlight Steps Timeline Enhancement --- */
+
+/* تنسيق Container للخطوات */
+.starlight-steps {
+  position: relative;
+  padding-right: 0.5rem;
+}
+
+/* تعديل دوائر الترقيم لتصبح متناغمة مع هوية عشرة */
+.starlight-steps > li::before {
+  background-color: var(--sl-color-gray-5);
+  color: var(--sl-color-white);
+  border: 2px solid var(--sl-color-gray-4);
+  transition: all 0.3s ease;
+}
+
+/* تأثير التمرير والتفاعل عند الوقوف أو التمرير */
+.starlight-steps > li:hover::before {
+  background-color: #0d9488 !important;
+  border-color: #99f6e4 !important;
+  color: #ffffff !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(13, 148, 136, 0.5);
+}
+
+/* خط الاتصال بين الخطوات Timeline Line */
+.starlight-steps > li::after {
+  background-color: var(--sl-color-gray-5);
+  transition: background-color 0.4s ease;
+}
+
+.starlight-steps > li:hover::after {
+  background-color: #0d9488;
+}
+
+/* تحسين تنسيق الصور داخل الخطوات */
+.step-image {
+  border-radius: 8px;
+  border: 1px solid var(--sl-color-gray-5);
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+}
