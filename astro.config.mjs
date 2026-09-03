@@ -22,18 +22,16 @@ export default defineConfig({
           },
         },
       ],
-      sidebar: [
-        {
-          label: 'البداية والإعداد',
-          items: [
-            { slug: 'getting-started/preparing-institution' },
-            { slug: 'getting-started/site-settings', label: 'الوصول لإعدادات المنصة' },
-            { slug: 'getting-started/choosing-usage-model' },
-
-           
-          ],
-        },
-      ],
+sidebar: [
+  {
+    label: 'البداية والإعداد',
+    items: [
+      { slug: 'getting-started/preparing-institution' },
+      { slug: 'getting-started/site-settings', label: 'الوصول لإعدادات المنصة' },
+      { slug: 'getting-started/choosing-usage-model' },
+    ],
+  },
+],
       customCss: ['./src/styles/custom.css'],
     }),
   ],
