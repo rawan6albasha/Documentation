@@ -26,9 +26,9 @@ sidebar: [
   {
     label: 'البداية والإعداد',
     items: [
-      { slug: 'getting-started/preparing-institution' },
+      { slug: 'getting-started/preparing-institution', label: 'كيف تجهّز الجهة التعليمية أو الأكاديمية قبل التشغيل؟' },
       { slug: 'getting-started/site-settings', label: 'الوصول لإعدادات المنصة' },
-      { slug: 'getting-started/choosing-usage-model' },
+      { slug: 'getting-started/choosing-usage-model', label: 'اختيار نموذج الاستخدام' },
     ],
   },
 ],
