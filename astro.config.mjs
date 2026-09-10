@@ -24,11 +24,10 @@ export default defineConfig({
       ],
 sidebar: [
   {
-    label: 'البداية والإعداد',
+    label: 'التجهيز والإعدادات',
     items: [
-      { slug: 'getting-started/preparing-institution', label: 'كيف تجهّز الجهة التعليمية أو الأكاديمية قبل التشغيل؟' },
-      { slug: 'getting-started/site-settings', label: 'الوصول لإعدادات المنصة' },
-      { slug: 'getting-started/choosing-usage-model', label: 'اختيار نموذج الاستخدام' },
+      { slug: 'getting-started/indexv1', label: 'نموذج أولي للفهرس' },
+     { slug: 'getting-started/currenciescountriescities', label: 'العملات والدول والمدن' },
     ],
   },
 ],
