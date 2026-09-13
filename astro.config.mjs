@@ -5,8 +5,13 @@ export default defineConfig({
   site: 'https://docs.ashara.sa',
   integrations: [
     starlight({
-      title: 'دليل منصة عشرة',
+      title: '',
       description: 'الدليل الشامل لاستخدام وإدارة منصة عشرة التعليمية',
+      logo: {
+        light: './src/assets/images/home_logolight_file10-logo0svg.svg',
+        dark: './src/assets/images/home_logo_file10-logo-w0svg.svg',
+        alt: 'لوغو منصة عشرة',
+      },
       defaultLocale: 'ar',
       locales: {
         ar: { label: 'العربية', lang: 'ar', dir: 'rtl' },

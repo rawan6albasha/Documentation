@@ -1,16 +1,237 @@
 ---
-title: توثيق منصة عشرة التعليمية
-description: الدليل الشامل لتهيئة، إعداد، وإدارة أكاديميتك والمنصة التعليمية خطوة بخطوة.
+title: "مركز توثيق منصة عشرة"
+description: "الدليل الشامل لإدارة وتشغيل المدارس الافتراضية، مراكز التدريب، وأدوات الذكاء الاصطناعي."
 template: splash
 hero:
-  tagline: مرحباً بك في دليل التشغيل الرسمي لمنصة عشرة. المكان الموحد لتوجيهك من التجهيز الأولي وحتى الإطلاق الكامل.
+  title: "أهلاً بك في دليل منصة عشرة"
+  tagline: "كل ما تحتاجه لتشغيل منصتك التعليمية في مكان واحد — من إدارة الدورات والمدارس والمحتوى، إلى الجلسات والحجوزات والمدفوعات وأدوات الذكاء الاصطناعي."
   image:
-    file: ../../../assets/houston.webp
+    file: ../../../assets/images/home_logolight_file10-logo0svg.svg
+    alt: "لوغو منصة عشرة"
   actions:
- 
-    - text: إعدادات المنصة المباشرة
-      link: /ar/getting-started/indexv1
-      icon: external
-      variant: secondary
+    - text: ابدأ من هنا
+      link: http://localhost:4321/ar/getting-started/currenciescountriescities
+      icon: right-arrow
+      variant: primary
+    - text: تصفح حسب الدور
+      link: http://localhost:4321/ar/getting-started/currenciescountriescities
+      icon: down-caret
 ---
+
+import trainingMedia from '../../../assets/gif/gif5.mp4';
+import aiMedia from '../../../assets/gif/gif4.mp4';
+import bookingMedia from '../../../assets/gif/gif5.mp4';
+import schoolsMedia from '../../../assets/gif/gif4.mp4';
+
+<div class="section-divider"></div>
+
+{/* قسم ابدأ من هنا */}
+<section class="roles-section" id="getting-started">
+  <div class="section-header">
+    <span class="section-tag">ابدأ من هنا</span>
+    <h2>ما الذي تريد إنجازه؟</h2>
+    <p>اختر المسار الأقرب إلى المهمة التي تريد تنفيذها داخل منصة عشرة</p>
+  </div>
+
+  <div class="ashara-roles-grid">
+
+    {/* كارت تهيئة المنصة */}
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="role-card admin-card">
+      <div class="role-icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <div class="role-body">
+        <h3>تهيئة المنصة</h3>
+        <p>ابدأ بالإعدادات الأساسية، والعملات، والدول والمدن، وكل ما تحتاجه لتجهيز المنصة.</p>
+      </div>
+      <span class="role-action-link">ابدأ بالتهيئة ←</span>
+    </a>
+
+    {/* كارت الدورات والمحتوى */}
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="role-card teacher-card">
+      <div class="role-icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          <path d="M8 6h8"/>
+          <path d="M8 10h8"/>
+        </svg>
+      </div>
+      <div class="role-body">
+        <h3>الدورات والمحتوى</h3>
+        <p>تعرّف على إدارة الدورات، إنشاء المحتوى، الدروس، الاختبارات، ومتابعة المتعلمين.</p>
+      </div>
+      <span class="role-action-link">استكشف الدورات والمحتوى ←</span>
+    </a>
+
+    {/* كارت المدارس */}
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="role-card student-card">
+      <div class="role-icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 10 9-6 9 6"/>
+          <path d="M5 10v10h14V10"/>
+          <path d="M9 20v-6h6v6"/>
+        </svg>
+      </div>
+      <div class="role-body">
+        <h3>المدارس الافتراضية</h3>
+        <p>استكشف إدارة المدارس، الصفوف، المواد، الطلاب، الجداول، الحضور والتقارير.</p>
+      </div>
+      <span class="role-action-link">استكشف المدارس ←</span>
+    </a>
+
+    {/* كارت الذكاء الاصطناعي */}
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="role-card teacher-card">
+      <div class="role-icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v2"/>
+          <path d="M12 20v2"/>
+          <path d="m4.93 4.93 1.42 1.42"/>
+          <path d="m17.65 17.65 1.42 1.42"/>
+          <path d="M2 12h2"/>
+          <path d="M20 12h2"/>
+          <path d="m6.34 17.66-1.41 1.41"/>
+          <path d="m19.07 4.93-1.42 1.42"/>
+          <circle cx="12" cy="12" r="4"/>
+        </svg>
+      </div>
+      <div class="role-body">
+        <h3>أدوات الذكاء الاصطناعي</h3>
+        <p>استخدم أدوات الذكاء الاصطناعي لإنشاء المحتوى، الاختبارات، والتقييم ومتابعة فهم الطلاب.</p>
+      </div>
+      <span class="role-action-link">استكشف أدوات الذكاء الاصطناعي ←</span>
+    </a>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+{/* قسم حسب الدور */}
+<section class="roles-section">
+  <div class="section-header">
+    <span class="section-tag">دليل التوجيه السريع</span>
+    <h2 id="roles">من أين تبدأ؟ (اختر حسب دورك)</h2>
+    <p>اختر مسارك المخصص للوصول السريع إلى الأدلة والتعليمات التي تهمك مباشرة</p>
+  </div>
+
+  <div class="ashara-roles-grid">
+
+    {/* كارت المسؤول */}
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="role-card admin-card">
+      <div class="role-icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <div class="role-body">
+        <h3>مسؤول نظام / إدارة</h3>
+        <p>إعدادات المنصة، التهيئة المالية، إدارة المستخدمين، المبيعات، والتقارير.</p>
+      </div>
+      <span class="role-action-link">عرض أدلة الإدارة ←</span>
+    </a>
+
+    {/* كارت المعلم */}
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="role-card teacher-card">
+      <div class="role-icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
+          <path d="m15 5 4 4"/>
+        </svg>
+      </div>
+      <div class="role-body">
+        <h3>معلّم / مدرب</h3>
+        <p>إدارة المحتوى، إنشاء الكورسات، استخدام أدوات الذكاء الاصطناعي، وتصحيح الاختبارات.</p>
+      </div>
+      <span class="role-action-link">عرض أدلة المعلمين ←</span>
+    </a>
+
+    {/* كارت الطالب */}
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="role-card student-card">
+      <div class="role-icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 0 0 1 0-5H20"/>
+        </svg>
+      </div>
+      <div class="role-body">
+        <h3>طالب / ولي أمر</h3>
+        <p>التعلّم، متابعة الحضور والتقدم، الاطلاع على التقارير، ومتابعة الأبناء.</p>
+      </div>
+      <span class="role-action-link">عرض أدلة الطلاب وأولياء الأمور ←</span>
+    </a>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+## المسارات والحلول الرئيسية
+
+<div class="ashara-tracks-grid" id="tracks">
+
+  {/* الكارت الأول: مراكز التدريب */}
+  <div class="ashara-track-card track-training" id="training">
+    <div class="track-card-image" aria-hidden="true">
+      <video src={trainingMedia} autoPlay loop muted playsInline></video>
+    </div>
+    <div class="card-header-area">
+      <span class="card-badge">مراكز التدريب</span>
+    </div>
+    <div class="card-content">
+      <h3>مراكز التدريب ومنصات التعليم الإلكتروني</h3>
+      <p>برامج تدريبية، دورات إلكترونية، متدربون، شهادات، متجر مدمج، وبيع ومتابعة — من لوحة واحدة.</p>
+    </div>
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="track-link">اكتشف المسار ←</a>
+  </div>
+
+  {/* الكارت الثاني: أدوات الذكاء الاصطناعي */}
+  <div class="ashara-track-card track-ai" id="ai-tools">
+    <div class="track-card-image" aria-hidden="true">
+      <video src={aiMedia} autoPlay loop muted playsInline></video>
+    </div>
+    <div class="card-header-area">
+      <span class="card-badge">الذكاء الاصطناعي</span>
+    </div>
+    <div class="card-content">
+      <h3>أدوات الذكاء الاصطناعي للمعلمين</h3>
+      <p>محرر دروس ذكي، اختبارات تُولّد من محتواك، Rubrics، ومتابعة فهم الطلاب — لمن يُعدّ المحتوى بنفسه.</p>
+    </div>
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="track-link">اكتشف المسار ←</a>
+  </div>
+
+  {/* الكارت الثالث: حجوزات الدروس */}
+  <div class="ashara-track-card track-booking" id="booking">
+    <div class="track-card-image" aria-hidden="true">
+      <video src={bookingMedia} autoPlay loop muted playsInline></video>
+    </div>
+    <div class="card-header-area">
+      <span class="card-badge">الحجوزات</span>
+    </div>
+    <div class="card-content">
+      <h3>حجوزات الدروس الخاصة والجلسات المباشرة</h3>
+      <p>صفحة شخصية، حجوزات وباقات، جلسات مباشرة 1:1 أو جماعية، ودفع مربوط بالمتابعة — دون أدوات خارجية.</p>
+    </div>
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="track-link">اكتشف المسار ←</a>
+  </div>
+
+  {/* الكارت الرابع: المدارس الافتراضية */}
+  <div class="ashara-track-card track-schools" id="virtual-schools">
+    <div class="track-card-image" aria-hidden="true">
+      <video src={schoolsMedia} autoPlay loop muted playsInline></video>
+    </div>
+    <div class="card-header-area">
+      <span class="card-badge">المدارس الافتراضية</span>
+    </div>
+    <div class="card-content">
+      <h3>المدارس الافتراضية أونلاين</h3>
+      <p>نظام مدرسي رقمي يجمع التعلّم عن بُعد والمتابعة والتقارير وبوابة ولي الأمر والحضور — مدرسة افتراضية كاملة.</p>
+    </div>
+    <a href="http://localhost:4321/ar/getting-started/currenciescountriescities" class="track-link">اكتشف المسار ←</a>
+  </div>
+
+</div>
 
