@@ -2,7 +2,22 @@
 :root {
   --sl-color-accent-low: #134e48;
   --sl-color-accent: #0d9488;
-  --sl-color-accent-high: #99f6e4;
+  --sl-color-accent-high: #53e3c7;
+}
+
+:root[data-theme='light'] {
+  --sl-color-bg: #f4faf8;
+  --sl-color-bg-nav: #eaf6f2;
+  --sl-color-bg-sidebar: #edf8f5;
+  --sl-color-gray-5: #d4e7e2;
+  --sl-color-gray-4: #bfd9d3;
+  --sl-color-gray-3: #52716c;
+}
+
+:root[data-theme='light'] body {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(13, 148, 136, 0.08), transparent 24rem),
+    linear-gradient(180deg, #f7fcfa 0%, #edf8f5 100%);
 }
 
 /* شعار منصة عشرة داخل شريط التنقل */
@@ -79,6 +94,30 @@ header .site-title img {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(3, 143, 120, 0.15);
   object-fit: contain;
+}
+
+.gif1-dark,
+.gif2-dark,
+.gif3-dark,
+.gif4-dark,
+.gif5-dark {
+  display: none;
+}
+
+:root[data-theme='dark'] .gif1-light,
+:root[data-theme='dark'] .gif2-light,
+:root[data-theme='dark'] .gif3-light,
+:root[data-theme='dark'] .gif4-light,
+:root[data-theme='dark'] .gif5-light {
+  display: none;
+}
+
+:root[data-theme='dark'] .gif1-dark,
+:root[data-theme='dark'] .gif2-dark,
+:root[data-theme='dark'] .gif3-dark,
+:root[data-theme='dark'] .gif4-dark,
+:root[data-theme='dark'] .gif5-dark {
+  display: block;
 }
 
 .ashara-guide-page {
@@ -329,9 +368,10 @@ header .site-title img {
 
 :root[data-theme='light'] .hero {
   background:
-    radial-gradient(circle at 18% 20%, color-mix(in srgb, var(--sl-color-accent) 14%, transparent), transparent 35%),
+radial-gradient(circle at 14% 17%, color-mix(in srgb, var(--sl-color-accent) 32%, transparent), transparent 29%),
     linear-gradient(135deg, #effaf7, var(--sl-color-bg));
 }
+
 
 :root[data-theme='light'] .hero h1 {
   color: #123c39;
@@ -379,6 +419,19 @@ header .site-title img {
   isolation: isolate;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   direction: ltr;
+  animation: card-rise 0.55s ease both;
+}
+
+.ashara-track-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.ashara-track-card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.ashara-track-card:nth-child(4) {
+  animation-delay: 0.24s;
 }
 
 .track-training {
@@ -516,7 +569,7 @@ header .site-title img {
 /* الفواصل بين الأقسام */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--sl-color-gray-5), transparent);
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sl-color-accent) 34%, var(--sl-color-gray-5)), transparent);
   margin: 2.5rem 0;
 }
 
@@ -537,7 +590,7 @@ header .site-title img {
   font-size: 0.75rem;
   font-weight: 700;
   background-color: var(--sl-color-accent-low);
-  color: var(--sl-color-accent-high);
+  color: #d4e7e2;
   margin-bottom: 0.5rem;
 }
 
@@ -575,6 +628,19 @@ header .site-title img {
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  animation: card-rise 0.55s ease both;
+}
+
+.ashara-roles-grid .role-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.ashara-roles-grid .role-card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.ashara-roles-grid .role-card:nth-child(4) {
+  animation-delay: 0.24s;
 }
 
 .role-card::before {
@@ -606,7 +672,7 @@ header .site-title img {
   align-items: center;
   justify-content: center;
   background-color: var(--sl-color-accent-low);
-  color: var(--sl-color-accent-high);
+  color: #d4e7e2;
   margin-bottom: 1rem;
 }
 
@@ -639,12 +705,34 @@ header .site-title img {
 
 /* تخصيص للمود الفاتح */
 :root[data-theme='light'] .role-card {
-  background-color: #ffffff;
-  border-color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.62);
+  border-color: #cfe4de;
+  box-shadow: 0 0.75rem 1.75rem rgba(24, 102, 91, 0.06);
 }
 
 :root[data-theme='light'] .role-body h3 {
-  color: #111827;
+  color: #173f3a;
+}
+
+:root[data-theme='light'] .role-body p,
+:root[data-theme='light'] .section-header p {
+  color: #52716c;
+}
+
+:root[data-theme='light'] .ashara-track-card {
+  --track-surface: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 0.9rem 2rem rgba(24, 102, 91, 0.08);
+}
+
+@keyframes card-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 50rem) {
