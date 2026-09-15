@@ -3,6 +3,15 @@
   --sl-color-accent-low: #134e48;
   --sl-color-accent: #0d9488;
   --sl-color-accent-high: #53e3c7;
+  --sl-font: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 :root[data-theme='light'] {
