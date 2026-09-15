@@ -1,0 +1,11 @@
+/* Tailwind v4 — utilities only (no preflight) so Starlight's base styles stay untouched.
+   Used exclusively by the product mockups in src/components/tracks. */
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "../components/tracks";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@theme {
+  --color-primary: #0d9488;
+  --color-primary-dark: #0f766e;
+}

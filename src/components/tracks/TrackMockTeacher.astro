@@ -1,0 +1,262 @@
+---
+// Teacher AI studio mock — ported from AudiencePicker.vue (audience.key === 'teacher').
+import MdiIcon from './MdiIcon.astro';
+---
+<div class="relative rounded-3xl p-1 bg-white/60 dark:bg-white/[0.03] border border-white/40 dark:border-white/5 shadow-2xl">
+  <div class="flex items-center justify-between px-4 py-3 border-b border-neutral-200/50 dark:border-neutral-800/40 bg-white/50 dark:bg-neutral-900/30 rounded-t-[22px]">
+    <div class="flex gap-1.5">
+      <span class="h-3 w-3 rounded-full bg-rose-500/80" />
+      <span class="h-3 w-3 rounded-full bg-amber-500/80" />
+      <span class="h-3 w-3 rounded-full bg-emerald-500/80" />
+    </div>
+    <div class="w-2/3 max-w-sm h-7 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/40 border border-neutral-300/30 dark:border-neutral-700/30 flex items-center justify-center gap-1.5 px-3">
+      <MdiIcon icon="mdi-lock" size={12} class="text-purple-500" />
+      <span class="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono" dir="ltr">10ashara.com/teacher/ai-studio</span>
+    </div>
+    <div class="flex items-center gap-2 text-neutral-400">
+      <MdiIcon icon="mdi-reload" size={14} />
+    </div>
+  </div>
+
+  <div class="bg-neutral-100/80 dark:bg-neutral-950 rounded-b-[22px] overflow-hidden text-[10px]" >
+    <div class="flex items-center justify-between px-3 py-2 bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800/80 gap-2 text-start">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="text-[12px] font-black text-purple-600 dark:text-purple-400 shrink-0">عشرة AI</span>
+        <div class="h-5 w-px bg-neutral-200 dark:bg-neutral-800 shrink-0" />
+        <h4 class="text-[7.5px] font-bold text-neutral-800 dark:text-neutral-200 truncate max-w-[150px]">
+          استوديو المعلم الذكي
+        </h4>
+      </div>
+      <div class="flex items-center gap-1 px-2.5 py-1 bg-purple-50 dark:bg-purple-950/30 text-purple-800 dark:text-purple-300 border border-purple-200/60 dark:border-purple-900/40 rounded-lg max-w-[200px]">
+        <MdiIcon icon="mdi-creation" size={9} class="text-purple-600 shrink-0" />
+        <span class="text-[7px] font-medium truncate">مساعد البناء بالذكاء الاصطناعي نشط</span>
+      </div>
+      <div class="flex items-center gap-1 shrink-0">
+        <div class="w-6 h-6 flex items-center justify-center rounded-lg bg-purple-700 text-white font-black text-[9px]">أ</div>
+      </div>
+    </div>
+
+    <div class="p-2 flex gap-2 min-h-[460px] text-start relative">
+      <div class="w-11 shrink-0 flex flex-col gap-1.5">
+        <div class="rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm flex items-center justify-center py-2">
+          <div class="w-7 h-7 rounded-full bg-purple-700 text-white flex items-center justify-center font-black text-[9px]">أ</div>
+        </div>
+        <div class="flex-1 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm flex flex-col items-center py-1.5 gap-0.5">
+          <div class="w-8 h-8 rounded-lg bg-purple-700 text-white flex items-center justify-center shadow-sm">
+            <MdiIcon icon="mdi-creation" size={14} />
+          </div>
+          <div class="w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-school-outline" size={14} />
+          </div>
+          <div class="w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-book-open-variant-outline" size={14} />
+          </div>
+          <div class="relative w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-chat-outline" size={14} />
+            <span class="absolute top-0.5 end-0.5 w-2.5 h-2.5 rounded-full bg-purple-600 text-white text-[5px] font-black flex items-center justify-center">2</span>
+          </div>
+          <div class="w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-calendar-month-outline" size={14} />
+          </div>
+        </div>
+        <div class="rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm flex items-center justify-center py-1.5 text-neutral-500">
+          <MdiIcon icon="mdi-chevron-left" size={14} />
+        </div>
+      </div>
+
+      <div class="flex-1 min-w-0 flex flex-col justify-between px-2 pb-2">
+        <div class="text-center flex flex-col items-center pt-4">
+          <h3 class="text-[14px] font-bold text-neutral-900 dark:text-white leading-none">أنشئ بالذكاء الاصطناعي</h3>
+          <p class="text-[8px] text-neutral-500 dark:text-neutral-400 mt-1.5">أدوات مقترحة لك خصيصاً بناءً على تخصصك وموادك</p>
+          <div class="flex gap-1 justify-center overflow-x-auto pb-1 mt-2.5 w-full">
+            <span class="px-2.5 py-0.5 rounded-full bg-purple-600 text-white text-[7.5px] font-bold shrink-0">الكل</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 text-[7.5px] shrink-0">التعليم المبكر</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 text-[7.5px] shrink-0">التخطيط</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 text-[7.5px] shrink-0">الأنشطة</span>
+          </div>
+        </div>
+
+        <div class="my-4 bg-white/90 dark:bg-neutral-900/70 border border-neutral-200/50 dark:border-neutral-800/50 rounded-2xl p-4 shadow-inner flex flex-col gap-2">
+          <div class="flex items-center justify-center gap-1">
+            <MdiIcon icon="mdi-creation" size={11} class="text-purple-600 dark:text-purple-400" />
+            <span class="text-[8.5px] font-black text-neutral-800 dark:text-neutral-100">المساعد التعليمي الذكي</span>
+          </div>
+          <div class="relative">
+            <div class="w-full bg-neutral-50 dark:bg-neutral-950 border border-purple-500/30 rounded-xl py-2.5 ps-3 pe-12 text-[8px] text-neutral-400 dark:text-neutral-500 text-center">
+              اكتب هنا ما تريد إنشاءه (مثال: تحضير درس مصفوفات)...
+            </div>
+            <span class="absolute end-1.5 top-1/2 -translate-y-1/2 w-8 h-6 bg-purple-600 text-white rounded-lg flex items-center justify-center shadow-md shadow-purple-600/10 shrink-0">
+              <MdiIcon icon="mdi-arrow-left" size={10} />
+            </span>
+          </div>
+          <div class="flex items-center justify-center gap-1.5 mt-1">
+            <span class="text-[7px] text-neutral-400">اقتراحات:</span>
+            <span class="px-1.5 py-0.5 bg-neutral-100 dark:bg-neutral-800/50 rounded text-neutral-500 dark:text-neutral-400 text-[6.5px]">تحضير مصفوفات</span>
+            <span class="px-1.5 py-0.5 bg-neutral-100 dark:bg-neutral-800/50 rounded text-neutral-500 dark:text-neutral-400 text-[6.5px]">عرض تقديمي ذكي</span>
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <div class="flex items-center justify-between px-1 pb-1">
+            <h4 class="text-[8px] font-bold text-neutral-800 dark:text-neutral-200">فصولي الدراسية</h4>
+            <span class="text-[6px] font-bold text-neutral-500 dark:text-neutral-400">3 فصول نشطة</span>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5">
+            <div class="rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm p-1.5 flex items-center gap-1.5 min-w-0">
+              <div class="w-6 h-6 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
+                <MdiIcon icon="mdi-school-outline" size={11} />
+              </div>
+              <div class="min-w-0 leading-tight">
+                <p class="text-[6.5px] font-bold text-neutral-800 dark:text-neutral-100 truncate">الصف السابع · أ</p>
+                <p class="text-[5.5px] text-neutral-500 dark:text-neutral-400 truncate">24 طالب · رياضيات</p>
+              </div>
+            </div>
+            <div class="rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm p-1.5 flex items-center gap-1.5 min-w-0">
+              <div class="w-6 h-6 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                <MdiIcon icon="mdi-school-outline" size={11} />
+              </div>
+              <div class="min-w-0 leading-tight">
+                <p class="text-[6.5px] font-bold text-neutral-800 dark:text-neutral-100 truncate">الصف الثامن · ب</p>
+                <p class="text-[5.5px] text-neutral-500 dark:text-neutral-400 truncate">21 طالب · علوم</p>
+              </div>
+            </div>
+            <div class="rounded-xl border border-dashed border-purple-500/40 bg-purple-500/5 dark:bg-purple-500/10 p-1.5 flex items-center justify-center gap-1 text-purple-600 dark:text-purple-400">
+              <MdiIcon icon="mdi-plus" size={11} />
+              <span class="text-[6.5px] font-black">إنشاء فصل دراسي</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-2 mt-auto">
+          <div class="h-16 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-2 flex flex-col justify-center items-center text-center shadow-sm relative overflow-hidden">
+            <span class="absolute top-1 start-1 px-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-[5px] font-bold">شائع</span>
+            <div class="w-5 h-5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 flex items-center justify-center text-[10px] mb-1">
+              <MdiIcon icon="mdi-presentation" size={10} />
+            </div>
+            <span class="text-[7.5px] font-bold text-neutral-800 dark:text-neutral-100 leading-tight">عروض تقديمية</span>
+          </div>
+          <div class="h-16 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-2 flex flex-col justify-center items-center text-center shadow-sm relative overflow-hidden">
+            <span class="absolute top-1 start-1 px-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-[5px] font-bold">شائع</span>
+            <div class="w-5 h-5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 flex items-center justify-center text-[10px] mb-1">
+              <MdiIcon icon="mdi-creation" size={10} />
+            </div>
+            <span class="text-[7.5px] font-bold text-neutral-800 dark:text-neutral-100 leading-tight">الدرس السحري</span>
+          </div>
+          <div class="h-16 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-2 flex flex-col justify-center items-center text-center shadow-sm relative overflow-hidden">
+            <span class="absolute top-1 start-1 px-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-[5px] font-bold">شائع</span>
+            <div class="w-5 h-5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 flex items-center justify-center text-[10px] mb-1">
+              <MdiIcon icon="mdi-calendar-check" size={10} />
+            </div>
+            <span class="text-[7.5px] font-bold text-neutral-800 dark:text-neutral-100 leading-tight">تخطيط الدروس</span>
+          </div>
+          <div class="h-16 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-2 flex flex-col justify-center items-center text-center shadow-sm relative overflow-hidden">
+            <span class="absolute top-1 start-1 px-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-[5px] font-bold">جديد</span>
+            <div class="w-5 h-5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 flex items-center justify-center text-[10px] mb-1">
+              <MdiIcon icon="mdi-video-play-outline" size={10} />
+            </div>
+            <span class="text-[7.5px] font-bold text-neutral-800 dark:text-neutral-100 leading-tight">فيديو تفاعلي</span>
+          </div>
+          <div class="h-16 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-2 flex flex-col justify-center items-center text-center shadow-sm relative overflow-hidden">
+            <span class="absolute top-1 start-1 px-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-[5px] font-bold">جديد</span>
+            <div class="w-5 h-5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 flex items-center justify-center text-[10px] mb-1">
+              <MdiIcon icon="mdi-magnify" size={10} />
+            </div>
+            <span class="text-[7.5px] font-bold text-neutral-800 dark:text-neutral-100 leading-tight">لعبة من أنا؟</span>
+          </div>
+          <div class="h-16 bg-gradient-to-br from-purple-600 to-indigo-700 rounded-xl p-2 flex flex-col justify-center items-center text-center shadow-md text-white border border-purple-500/20">
+            <div class="flex -space-x-1.5 rtl:space-x-reverse mb-1">
+              <div class="w-5 h-5 rounded-full bg-white/40 border border-white/25 flex items-center justify-center text-[6px]"><MdiIcon icon="mdi-palette-outline" size={8} /></div>
+              <div class="w-5 h-5 rounded-full bg-white/40 border border-white/25 flex items-center justify-center text-[6px]"><MdiIcon icon="mdi-lead-pencil" size={8} /></div>
+            </div>
+            <span class="text-[7.5px] font-bold">كل الأدوات +60</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-2 start-2 z-30 flex flex-col items-start gap-2 pointer-events-none">
+        <div class="w-[190px] rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10 bg-[#1e2128] ap-float-slow">
+          <div class="flex items-center gap-2 px-2.5 py-2 bg-gradient-to-l from-purple-700 to-indigo-500">
+            <div class="relative shrink-0">
+              <div class="h-6 w-6 rounded-full bg-white/20 flex items-center justify-center text-[8px] font-black text-white border border-white/30">٧أ</div>
+              <span class="absolute -bottom-0.5 -end-0.5 h-2 w-2 rounded-full bg-emerald-400 border border-purple-700" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="text-[8px] font-black text-white truncate">طلاب الصف السابع · أ</p>
+              <p class="text-[5.5px] text-white/75">24 طالب · 6 نشطون الآن</p>
+            </div>
+            <MdiIcon icon="mdi-minus" size={12} class="text-white/80" />
+          </div>
+          <div class="p-2 space-y-1.5 max-h-[100px] overflow-hidden bg-[#0f1117]">
+            <div class="flex justify-start">
+              <div class="max-w-[85%] rounded-2xl rounded-se-md bg-[#2a2d36] px-2 py-1.5">
+                <p class="text-[6.5px] text-white/90 leading-relaxed">أستاذ، ما فهمت السؤال الثاني 🙋</p>
+                <p class="text-[5px] text-white/30 mt-0.5">سارة · الآن</p>
+              </div>
+            </div>
+            <div class="flex justify-end">
+              <div class="max-w-[80%] rounded-2xl rounded-ss-md bg-purple-600 px-2 py-1.5">
+                <p class="text-[6.5px] text-white leading-relaxed">أرسلت لكم شرحاً تفاعلياً، جربوه ✓</p>
+                <p class="text-[5px] text-white/50 mt-0.5 text-end">تم الإرسال</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 px-2 py-1.5 border-t border-white/5 bg-[#1a1d24]">
+            <div class="flex-1 h-5 rounded-full bg-white/5 border border-white/10 px-2 flex items-center">
+              <span class="text-[6px] text-white/30">اكتب رسالة للطلاب...</span>
+            </div>
+            <div class="h-5 w-5 rounded-full bg-purple-600 flex items-center justify-center">
+              <MdiIcon icon="mdi-send" size={9} class="text-white" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="absolute -top-3 -start-4 bg-white dark:bg-neutral-900 border border-purple-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float max-w-[168px]">
+  <div class="h-9 w-9 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500 shrink-0">
+    <MdiIcon icon="mdi-presentation" size={18} />
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-purple-600 dark:text-purple-400">البرزنتيشن جاهز</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">12 شريحة منسقة بالذكاء الاصطناعي</span>
+    <span class="text-[8px] font-bold text-purple-600 dark:text-purple-400 mt-1 flex items-center gap-0.5">
+      تصدير PPTX <MdiIcon icon="mdi-download" size={9} />
+    </span>
+  </div>
+</div>
+
+<div class="absolute -top-3 -end-5 bg-white dark:bg-neutral-900 border border-emerald-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float-delayed max-w-[168px]">
+  <div class="relative h-9 w-9 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 shrink-0">
+    <MdiIcon icon="mdi-video-play-outline" size={18} />
+    <span class="absolute -top-0.5 -end-0.5 w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-emerald-600 dark:text-emerald-400">فيديو تفاعلي</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">تم دمج الأسئلة داخل الشرح</span>
+    <span class="text-[8px] font-bold text-neutral-800 dark:text-neutral-200 mt-1">بدء الحصة الآن</span>
+  </div>
+</div>
+
+<div class="absolute top-[36%] -end-5 bg-white dark:bg-neutral-900 border border-pink-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float max-w-[168px]">
+  <div class="h-9 w-9 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-500 shrink-0">
+    <MdiIcon icon="mdi-palette-outline" size={18} />
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-pink-600 dark:text-pink-400">التعليم المبكر</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">أوراق رسم وتلوين مولدة</span>
+    <span class="text-[8px] font-bold text-neutral-800 dark:text-neutral-200 mt-1 truncate">«طباعة أوراق النشاط»</span>
+  </div>
+</div>
+
+<div class="absolute bottom-12 -end-4 bg-white dark:bg-neutral-900 border border-violet-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float-slow max-w-[168px]">
+  <div class="h-9 w-9 rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-500 shrink-0">
+    <MdiIcon icon="mdi-auto-fix" size={18} />
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-violet-600 dark:text-violet-400">تصحيح AI</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">اختبار الوحدة صُحّح تلقائياً</span>
+    <span class="text-[8px] font-bold text-neutral-800 dark:text-neutral-200 mt-1">24 ورقة · 3 دقائق</span>
+  </div>
+</div>

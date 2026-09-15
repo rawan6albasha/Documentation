@@ -1,0 +1,144 @@
+---
+// Hero visual: the four track mockups cross-fading every 3s (replaces the static logo).
+import MdiIcon from './tracks/MdiIcon.astro';
+import TrackMockFrame from './tracks/TrackMockFrame.astro';
+import TrackMockTraining from './tracks/TrackMockTraining.astro';
+import TrackMockTeacher from './tracks/TrackMockTeacher.astro';
+import TrackMockBooking from './tracks/TrackMockBooking.astro';
+import TrackMockSchool from './tracks/TrackMockSchool.astro';
+
+const slides = [
+  { Mock: TrackMockTraining, height: 660, icon: 'mdi-storefront-outline', label: 'مراكز التدريب', dot: 'bg-emerald-600', chip: 'text-emerald-700 dark:text-emerald-300' },
+  { Mock: TrackMockTeacher, height: 600, icon: 'mdi-human-male-board', label: 'أدوات المعلمين', dot: 'bg-violet-600', chip: 'text-violet-700 dark:text-violet-300' },
+  { Mock: TrackMockBooking, height: 540, icon: 'mdi-calendar-clock-outline', label: 'الحجوزات والجلسات', dot: 'bg-rose-500', chip: 'text-rose-700 dark:text-rose-300' },
+  { Mock: TrackMockSchool, height: 580, icon: 'mdi-school-outline', label: 'المدارس الافتراضية', dot: 'bg-sky-600', chip: 'text-sky-700 dark:text-sky-300' },
+];
+---
+
+<div class="hero-carousel not-content" data-hero-carousel>
+  <div class="hero-carousel-stage">
+    {slides.map(({ Mock, height }, index) => (
+      <div class="hero-carousel-slide" data-slide data-active={index === 0 ? '' : undefined} aria-hidden={index === 0 ? undefined : 'true'}>
+        <TrackMockFrame height={height}>
+          <Mock />
+        </TrackMockFrame>
+      </div>
+    ))}
+  </div>
+
+  <div class="hero-carousel-nav">
+    {slides.map(({ icon, label, chip }, index) => (
+      <span class:list={['hero-carousel-label inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1 text-xs font-extrabold shadow-sm ring-1 ring-black/5 dark:bg-neutral-950/70 dark:ring-white/10', chip]} data-label data-active={index === 0 ? '' : undefined}>
+        <MdiIcon icon={icon} size={14} />
+        {label}
+      </span>
+    ))}
+    <div class="flex items-center gap-2">
+      {slides.map(({ label, dot }, index) => (
+        <button type="button" class:list={['hero-carousel-dot', dot]} data-dot data-active={index === 0 ? '' : undefined} aria-label={label} />
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero-carousel {
+    position: relative;
+    width: 100%;
+  }
+  .hero-carousel-stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 620 / 660;
+  }
+  .hero-carousel-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+    transition: opacity 700ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  .hero-carousel-slide > :global(*) {
+    width: 100%;
+  }
+  .hero-carousel-slide[data-active] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-carousel-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.75rem;
+  }
+  .hero-carousel-label:not([data-active]) {
+    display: none;
+  }
+  .hero-carousel-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: width 300ms ease, opacity 300ms ease;
+  }
+  .hero-carousel-dot[data-active] {
+    width: 1.5rem;
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-carousel-slide {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const INTERVAL = 3000;
+
+  document.querySelectorAll<HTMLElement>('[data-hero-carousel]').forEach((root) => {
+    const slides = [...root.querySelectorAll<HTMLElement>('[data-slide]')];
+    const labels = [...root.querySelectorAll<HTMLElement>('[data-label]')];
+    const dots = [...root.querySelectorAll<HTMLButtonElement>('[data-dot]')];
+    if (slides.length < 2) return;
+
+    let current = 0;
+    let timer: number | undefined;
+
+    const show = (index: number) => {
+      current = (index + slides.length) % slides.length;
+      [slides, labels, dots].forEach((group) =>
+        group.forEach((el, i) => el.toggleAttribute('data-active', i === current))
+      );
+      slides.forEach((el, i) => el.setAttribute('aria-hidden', String(i !== current)));
+    };
+
+    const stop = () => window.clearInterval(timer);
+    const start = () => {
+      stop();
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      timer = window.setInterval(() => show(current + 1), INTERVAL);
+    };
+
+    dots.forEach((dot, i) =>
+      dot.addEventListener('click', () => {
+        show(i);
+        start();
+      })
+    );
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+
+    start();
+  });
+</script>

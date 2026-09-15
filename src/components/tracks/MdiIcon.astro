@@ -1,0 +1,28 @@
+---
+// Inline Material Design Icon — replaces Vuetify's <v-icon icon="mdi-…"> from the reference component.
+import * as mdi from '@mdi/js';
+
+interface Props {
+  icon: string;
+  size?: number | string;
+  class?: string;
+  style?: string;
+}
+const { icon, size = 16, class: className = '', style } = Astro.props;
+const key = icon.replace(/^mdi-/, '').replace(/-([a-z0-9])/g, (_, c) => c.toUpperCase());
+const path = (mdi as Record<string, string>)['mdi' + key.charAt(0).toUpperCase() + key.slice(1)];
+if (!path) console.warn(`[MdiIcon] unknown icon: ${icon}`);
+---
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width={size}
+  height={size}
+  fill="currentColor"
+  aria-hidden="true"
+  class:list={['mdi-icon', className]}
+  style={style}
+><path d={path ?? ''} /></svg>
+<style>
+  .mdi-icon { display: inline-block; flex-shrink: 0; vertical-align: middle; }
+</style>
