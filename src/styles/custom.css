@@ -1,3 +1,8 @@
+/* خط IBM Plex Sans Arabic للواجهة والمحتوى */
+:root {
+  --sl-font: 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
 /* ألوان منصة عشرة الأساسية */
 :root {
   --sl-color-accent-low: #134e48;
@@ -33,7 +38,8 @@ select {
 header .site-title img {
   width: auto;
   max-width: 9rem;
-  height: 6.25rem;
+  /* ارتفاع الشعار ضمن الهيدر مع مسافة فوقه وتحته */
+  height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y));
   object-fit: contain;
 }
 
@@ -294,11 +300,12 @@ header .site-title img {
   padding: clamp(2rem, 5vw, 4rem);
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--sl-color-accent) 24%, var(--sl-color-gray-5));
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   background:
     radial-gradient(circle at 18% 20%, color-mix(in srgb, var(--sl-color-accent) 24%, transparent), transparent 35%),
     linear-gradient(135deg, color-mix(in srgb, var(--sl-color-accent-low) 90%, var(--sl-color-bg) 10%), var(--sl-color-bg-nav));
-  box-shadow: 0 1.5rem 3rem color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+  /* نفس ظل كروت المسارات */
+  box-shadow: 0 24px 70px -38px rgba(15, 23, 42, 0.28);
   text-align: right;
   box-sizing: border-box;
 }
@@ -337,6 +344,36 @@ header .site-title img {
   filter: brightness(0) invert(1) drop-shadow(0 1.25rem 1.5rem color-mix(in srgb, var(--sl-color-accent) 28%, transparent));
 }
 
+/* الموك أب المتبدل مكان اللوغو (ديسك توب: جنب الكلام) */
+.hero:has(> .hero-carousel) {
+  min-height: 0;
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.hero > .hero-carousel {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  width: min(100%, 28rem);
+  z-index: 1;
+}
+
+/* نقص ارتفاع الموك أب حتى يبقى الهيرو قصير، مع تلاشي ناعم من تحت */
+.hero > .hero-carousel .hero-carousel-stage {
+  aspect-ratio: 620 / 470;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent);
+  mask-image: linear-gradient(to bottom, #000 78%, transparent);
+}
+
+.hero > .hero-carousel .hero-carousel-slide {
+  align-items: flex-start;
+}
+
+.hero > .hero-carousel .hero-carousel-nav {
+  margin-top: 0.25rem;
+}
+
 .hero > .stack {
   grid-column: 1;
   grid-row: 1;
@@ -354,6 +391,8 @@ header .site-title img {
 
 .hero h1 {
   max-width: 38rem;
+  font-size: clamp(1.9rem, 1rem + 3vw, 3.25rem);
+  font-weight: 700;
   color: var(--sl-color-white);
   text-wrap: balance;
 }
@@ -383,365 +422,11 @@ radial-gradient(circle at 14% 17%, color-mix(in srgb, var(--sl-color-accent) 32%
 
 
 :root[data-theme='light'] .hero h1 {
-  color: #123c39;
+  color: #0a2724;
 }
 
 :root[data-theme='light'] .hero .tagline {
   color: #46635f;
-}
-
-/* روابط الأدوار داخل الكروت الصغيرة */
-.role-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-weight: 600;
-  color: var(--sl-color-accent-high);
-  text-decoration: none;
-}
-.role-link:hover {
-  text-decoration: underline;
-}
-
-/* شبكة كروت المسارات الكبرى */
-.ashara-tracks-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 2.25rem;
-}
-
-.ashara-track-card {
-  --track-accent: #0d9488;
-  --track-accent-soft: #d9f5ef;
-  --track-surface: #ffffff;
-  --track-text: #173c3a;
-  --track-muted: #4b6462;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--track-accent) 22%, var(--sl-color-gray-5));
-  border-radius: 14px;
-  background: var(--track-surface);
-  color: var(--track-text);
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--track-accent) 10%, transparent);
-  isolation: isolate;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  direction: ltr;
-  animation: card-rise 0.55s ease both;
-}
-
-.ashara-track-card:nth-child(2) {
-  animation-delay: 0.08s;
-}
-
-.ashara-track-card:nth-child(3) {
-  animation-delay: 0.16s;
-}
-
-.ashara-track-card:nth-child(4) {
-  animation-delay: 0.24s;
-}
-
-.track-training {
-  --track-accent: #0d9488;
-  --track-accent-soft: #d9f5ef;
-}
-
-.track-ai {
-  --track-accent: #3b82a0;
-  --track-accent-soft: #dceef5;
-}
-
-.track-booking {
-  --track-accent: #b7791f;
-  --track-accent-soft: #f8ebd1;
-}
-
-.track-schools {
-  --track-accent: #467a66;
-  --track-accent-soft: #e0eee7;
-}
-
-.track-card-image {
-  position: relative;
-  display: flex;
-  flex: 0 0 auto;
-  min-height: 220px;
-  place-items: center;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: var(--track-accent-soft);
-}
-
-
-
-.track-card-image video {
-  width: 93%;
-  height: 92%;
-  border: 1px solid color-mix(in srgb, var(--track-accent) 20%, transparent);
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 10px 22px color-mix(in srgb, var(--track-accent) 20%, transparent);
-  transform: none;
-}
-
-.ashara-track-card .card-header-area,
-.ashara-track-card .card-content,
-.ashara-track-card .track-link {
-  position: relative;
-  z-index: 1;
-  direction: rtl;
-}
-
-.ashara-track-card .card-header-area {
-  margin: 1.5rem 1.5rem 0.25rem;
-}
-
-.ashara-track-card .card-content {
-  flex: 1;
-  padding: 0 1.5rem;
-}
-
-.ashara-track-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--track-accent);
-  box-shadow: 0 16px 32px color-mix(in srgb, var(--track-accent) 18%, transparent);
-}
-
-.card-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.7rem;
-  border: 1px solid color-mix(in srgb, var(--track-accent) 25%, transparent);
-  border-radius: 999px;
-  color: var(--track-accent);
-  background: color-mix(in srgb, var(--track-accent-soft) 70%, var(--track-surface));
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-.ashara-track-card h3 {
-  margin: 0.6rem 0 0.45rem;
-  color: var(--track-text);
-  font-size: 1.2rem;
-  font-weight: 750;
-  line-height: 1.45;
-}
-
-.ashara-track-card p {
-  margin: 0 0 1.25rem;
-  color: var(--track-muted);
-  font-size: 0.94rem;
-  line-height: 1.75;
-}
-
-.ashara-track-card .track-link {
-  display: block;
-  margin: 0 1.5rem 1.5rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid color-mix(in srgb, var(--track-accent) 18%, transparent);
-  color: var(--track-accent);
-  font-size: 0.92rem;
-  font-weight: 750;
-  text-decoration: none;
-}
-
-.ashara-track-card .track-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
-:root[data-theme='dark'] .ashara-track-card {
-  --track-surface: #172725;
-  --track-text: #effaf6;
-  --track-muted: #b9cfca;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
-}
-
-:root[data-theme='dark'] .track-training {
-  --track-accent-soft: #164843;
-}
-
-:root[data-theme='dark'] .track-ai {
-  --track-accent-soft: #1d4352;
-}
-
-:root[data-theme='dark'] .track-booking {
-  --track-accent-soft: #4b381b;
-}
-
-:root[data-theme='dark'] .track-schools {
-  --track-accent-soft: #234a3b;
-}
-/* الفواصل بين الأقسام */
-.section-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sl-color-accent) 34%, var(--sl-color-gray-5)), transparent);
-  margin: 2.5rem 0;
-}
-
-/* قسم الأدوار */
-.roles-section {
-  margin: 2rem 0;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.section-tag {
-  display: inline-block;
-  padding: 0.2rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  background-color: var(--sl-color-accent-low);
-  color: #d4e7e2;
-  margin-bottom: 0.5rem;
-}
-
-.section-header h2 {
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin: 0.25rem 0 0.5rem 0 !important;
-  border: none !important;
-}
-
-.section-header p {
-  color: var(--sl-color-gray-3);
-  font-size: 0.95rem;
-  margin: 0;
-}
-
-/* شبكة كروت الأدوار */
-.ashara-roles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-}
-
-/* تصميم كارت الدور */
-.role-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5rem;
-  border-radius: 14px;
-  border: 1px solid var(--sl-color-gray-5);
-  background-color: var(--sl-color-bg-nav);
-  text-decoration: none !important;
-  color: inherit !important;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  animation: card-rise 0.55s ease both;
-}
-
-.ashara-roles-grid .role-card:nth-child(2) {
-  animation-delay: 0.08s;
-}
-
-.ashara-roles-grid .role-card:nth-child(3) {
-  animation-delay: 0.16s;
-}
-
-.ashara-roles-grid .role-card:nth-child(4) {
-  animation-delay: 0.24s;
-}
-
-.role-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 3px;
-  background: transparent;
-  transition: background 0.25s ease;
-}
-
-.role-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-  border-color: var(--sl-color-accent);
-}
-
-.role-card:hover::before {
-  background: var(--sl-color-accent);
-}
-
-.role-icon-wrapper {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--sl-color-accent-low);
-  color: #d4e7e2;
-  margin-bottom: 1rem;
-}
-
-.role-body h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0 !important;
-  color: var(--sl-color-white);
-}
-
-.role-body p {
-  font-size: 0.875rem;
-  color: var(--sl-color-gray-3);
-  line-height: 1.5;
-  margin: 0 0 1.25rem 0;
-}
-
-.role-action-link {
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--sl-color-accent-high);
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.role-card:hover .role-action-link {
-  text-decoration: underline;
-}
-
-/* تخصيص للمود الفاتح */
-:root[data-theme='light'] .role-card {
-  background: rgba(255, 255, 255, 0.62);
-  border-color: #cfe4de;
-  box-shadow: 0 0.75rem 1.75rem rgba(24, 102, 91, 0.06);
-}
-
-:root[data-theme='light'] .role-body h3 {
-  color: #173f3a;
-}
-
-:root[data-theme='light'] .role-body p,
-:root[data-theme='light'] .section-header p {
-  color: #52716c;
-}
-
-:root[data-theme='light'] .ashara-track-card {
-  --track-surface: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 0.9rem 2rem rgba(24, 102, 91, 0.08);
-}
-
-@keyframes card-rise {
-  from {
-    opacity: 0;
-    transform: translateY(0.75rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 50rem) {
@@ -761,6 +446,59 @@ radial-gradient(circle at 14% 17%, color-mix(in srgb, var(--sl-color-accent) 32%
     max-height: 12rem;
   }
 
+  /* بالموبايل: الموك أب خلفية للهيرو، وفوقه طبقة بلورية حتى يبقى الكلام واضح */
+  .hero:has(> .hero-carousel) {
+    padding: 1.5rem;
+  }
+
+  .hero > .hero-carousel {
+    /* auto + stretch: an absolute grid child placed in column 2 would use that collapsed column as its box */
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: stretch;
+    align-self: stretch;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+
+  .hero > .hero-carousel .hero-carousel-stage {
+    width: min(100%, 26rem);
+    aspect-ratio: 620 / 660;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .hero > .hero-carousel .hero-carousel-slide {
+    align-items: center;
+  }
+
+  .hero > .hero-carousel .hero-carousel-nav {
+    display: none;
+  }
+
+  .hero > .hero-carousel::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: color-mix(in srgb, var(--sl-color-bg) 45%, transparent);
+    -webkit-backdrop-filter: blur(6px) saturate(1.2);
+    backdrop-filter: blur(6px) saturate(1.2);
+    content: '';
+  }
+
+  .hero:has(> .hero-carousel) > .stack {
+    position: relative;
+    z-index: 2;
+    grid-row: 1;
+  }
+
   .hero > .stack {
     grid-column: 1;
     grid-row: 2;
@@ -774,19 +512,6 @@ radial-gradient(circle at 14% 17%, color-mix(in srgb, var(--sl-color-accent) 32%
     flex-wrap: wrap;
   }
 
-  .ashara-tracks-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .track-card-image {
-    min-height: 180px;
-  }
-
-  .track-card-image video {
-    width: 76%;
-    height: 82%;
-    transform: none;
-  }
 }
 
 
@@ -800,4 +525,40 @@ radial-gradient(circle at 14% 17%, color-mix(in srgb, var(--sl-color-accent) 32%
   .ashara-guide-page > table td {
     min-width: 10rem;
   }
+}
+
+
+/* Sidebar polish */
+.sidebar-content ul.top-level > li + li {
+  margin-top: 0.5rem;
+}
+
+.sidebar-content summary {
+  padding-block: 0.35rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar-content details ul {
+  margin-top: 0.35rem;
+  padding-inline-start: 0.5rem;
+  border-inline-start-color: color-mix(in srgb, var(--sl-color-accent) 25%, transparent);
+}
+
+.sidebar-content details ul li + li {
+  margin-top: 0.3rem;
+}
+
+.sidebar-content a {
+  padding-block: 0.45rem;
+  padding-inline: 0.85rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-content a:not([aria-current='page']):hover {
+  background-color: color-mix(in srgb, var(--sl-color-accent) 10%, transparent);
+}
+
+.sidebar-content a[aria-current='page'] {
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--sl-color-accent) 25%, transparent);
 }

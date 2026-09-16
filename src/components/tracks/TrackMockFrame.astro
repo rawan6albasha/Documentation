@@ -1,0 +1,93 @@
+---
+// Scaled "stage" hosting one full-size product mockup (620px design width),
+// shrunk to a fixed 0.52 ratio — mirrors .ap-course-frame in AudiencePicker.vue.
+interface Props {
+  /** Design height of the mock in px, per mock, from the reference component. */
+  height?: number;
+  class?: string;
+}
+const { height = 660, class: className = '' } = Astro.props;
+---
+<div class:list={['ap-course-frame not-content', className]} style={`--ap-h:${height}px`} dir="ltr" aria-hidden="true">
+  <div class="ap-course-mock">
+    <div class="ap-course-stage relative">
+      <div class="ap-course-shell relative">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .ap-course-frame {
+    --ap-s: 0.52;
+    --ap-w: 620px;
+    --ap-h: 660px;
+    width: calc(var(--ap-w) * var(--ap-s));
+    height: calc(var(--ap-h) * var(--ap-s));
+    margin-inline: auto;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--sl-font, system-ui, sans-serif);
+    font-size: 16px;
+    line-height: 1.5;
+    color: #171717;
+  }
+  .ap-course-mock {
+    width: var(--ap-w);
+    transform: scale(var(--ap-s));
+    transform-origin: top left;
+    pointer-events: none;
+  }
+  .ap-course-stage {
+    box-sizing: border-box;
+    width: var(--ap-w);
+    height: var(--ap-h);
+    padding: 18px 22px 20px;
+  }
+
+  /* Neutralise Starlight markdown rules that would otherwise leak into the mock. */
+  .ap-course-frame :is(h1, h2, h3, h4, h5, h6, p, ul, ol, li, table, button, span, div) { margin: 0; }
+  .ap-course-frame :is(h1, h2, h3, h4, h5, h6) { color: inherit; font-family: inherit; line-height: inherit; }
+  .ap-course-frame button { font: inherit; color: inherit; border: 0; background: none; cursor: default; }
+  .ap-course-frame table { display: table; width: 100%; border-collapse: collapse; }
+  .ap-course-frame :is(td, th) { border: 0; padding: 0; }
+  .ap-course-frame ul, .ap-course-frame ol { list-style: none; padding: 0; }
+
+  /* Infinite loops are dropped, as in the reference — bad perf, no visual gain here. */
+  .ap-course-frame :is(.ap-float, .ap-float-delayed, .ap-float-slow, .ap-marquee, .animate-pulse, .animate-ping) {
+    animation: none !important;
+  }
+
+  /* Weekly calendar (school mock) — equal row height to fill the panel. */
+  .ap-weekly-calendar { table-layout: fixed; height: 100%; }
+  .ap-weekly-calendar tbody { height: 100%; }
+  .ap-weekly-calendar tbody tr { height: 1%; }
+</style>
+
+<script>
+  // The reference uses a fixed 0.52 ratio for a ~600px-wide card. The docs content column is
+  // wider, so scale each mock to fill its own column instead, keeping the same visual weight.
+  const DESIGN_WIDTH = 620;
+  const frames = document.querySelectorAll<HTMLElement>('.ap-course-frame');
+
+  const fit = (frame: HTMLElement) => {
+    const slot = frame.parentElement;
+    if (!slot) return;
+    const width = slot.clientWidth;
+    if (!width) return;
+    frame.style.setProperty('--ap-s', String(Math.min(1, width / DESIGN_WIDTH)));
+  };
+
+  const observer = new ResizeObserver((entries) => {
+    for (const entry of entries) {
+      const frame = (entry.target as HTMLElement).querySelector<HTMLElement>('.ap-course-frame');
+      if (frame) fit(frame);
+    }
+  });
+
+  frames.forEach((frame) => {
+    fit(frame);
+    if (frame.parentElement) observer.observe(frame.parentElement);
+  });
+</script>

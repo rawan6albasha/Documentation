@@ -1,0 +1,361 @@
+---
+// Training-track product mockup, ported from AudiencePicker.vue (audience.key === 'training' block).
+import MdiIcon from './MdiIcon.astro';
+---
+<div class="relative rounded-3xl p-1 bg-white/60 dark:bg-white/[0.03] border border-white/40 dark:border-white/5 shadow-2xl">
+  <div class="flex items-center justify-between px-4 py-3 border-b border-neutral-200/50 dark:border-neutral-800/40 bg-white/50 dark:bg-neutral-900/30 rounded-t-[22px]">
+    <div class="flex gap-1.5">
+      <span class="h-3 w-3 rounded-full bg-rose-500/80" />
+      <span class="h-3 w-3 rounded-full bg-amber-500/80" />
+      <span class="h-3 w-3 rounded-full bg-emerald-500/80" />
+    </div>
+    <div class="w-2/3 max-w-sm h-7 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/40 border border-neutral-300/30 dark:border-neutral-700/30 flex items-center justify-center gap-1.5 px-3">
+      <MdiIcon icon="mdi-lock" size={12} class="text-emerald-500" />
+      <span class="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono" dir="ltr">10ashara.com/course/training/tasks</span>
+    </div>
+    <div class="flex items-center gap-2 text-neutral-400">
+      <MdiIcon icon="mdi-reload" size={14} />
+    </div>
+  </div>
+
+  <div class="bg-neutral-100/80 dark:bg-neutral-950 rounded-b-[22px] overflow-hidden text-[10px]" >
+    <div class="flex items-center justify-between px-3 py-2 bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800/80 gap-2">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="text-[12px] font-black text-emerald-800 dark:text-emerald-400 shrink-0">عشرة</span>
+        <div class="h-5 w-px bg-neutral-200 dark:bg-neutral-800 shrink-0" />
+        <h4 class="text-[7.5px] font-bold text-neutral-800 dark:text-neutral-200 truncate max-w-[150px]">
+          إدارة الأعمال: الأساسيات ...
+        </h4>
+      </div>
+      <div class="flex items-center gap-1 px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-800 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-900/40 rounded-lg max-w-[200px]">
+        <MdiIcon icon="mdi-format-quote-open" size={9} class="text-emerald-600 shrink-0" />
+        <span class="text-[7px] font-medium truncate">ابدأ يومك بذكر الله؛ يُبارك وقتك</span>
+        <MdiIcon icon="mdi-format-quote-close" size={9} class="text-emerald-600 shrink-0" />
+      </div>
+      <div class="flex items-center gap-1 shrink-0">
+        <button type="button" class="flex items-center gap-0.5 px-2 py-1 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-[7.5px] font-bold text-neutral-700 dark:text-neutral-300">
+          <MdiIcon icon="mdi-book-open-variant-outline" size={10} />
+          <span>محتوى الدورة</span>
+        </button>
+        <button type="button" class="w-6 h-6 flex items-center justify-center rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+          <span class="text-[7.5px] font-bold text-neutral-600">文A</span>
+        </button>
+        <button type="button" class="w-6 h-6 flex items-center justify-center rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-neutral-500">
+          <MdiIcon icon="mdi-lightbulb-outline" size={10} />
+        </button>
+        <button type="button" class="relative w-6 h-6 flex items-center justify-center rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-neutral-500">
+          <MdiIcon icon="mdi-bell-outline" size={10} />
+          <span class="absolute -top-0.5 -start-0.5 w-3 h-3 bg-emerald-600 text-white rounded-full flex items-center justify-center text-[6px] font-bold">3</span>
+        </button>
+        <div class="w-6 h-6 flex items-center justify-center rounded-lg bg-emerald-700 text-white font-black text-[9px]">A</div>
+      </div>
+    </div>
+
+    <div class="p-2 flex gap-2 min-h-[500px]">
+      <div class="w-11 shrink-0 flex flex-col gap-1.5">
+        <div class="rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm flex items-center justify-center py-2">
+          <div class="w-7 h-7 rounded-full bg-emerald-700 text-white flex items-center justify-center font-black text-[9px]">A</div>
+        </div>
+        <div class="flex-1 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm flex flex-col items-center py-1.5 gap-0.5">
+          <div class="w-8 h-8 rounded-lg bg-emerald-800 text-white flex items-center justify-center shadow-sm">
+            <MdiIcon icon="mdi-school-outline" size={14} />
+          </div>
+          <div class="w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-book-open-variant-outline" size={14} />
+          </div>
+          <div class="w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-checkbox-marked-circle-outline" size={14} />
+          </div>
+          <div class="w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-notebook-outline" size={14} />
+          </div>
+          <div class="w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-file-document-outline" size={14} />
+          </div>
+          <div class="w-8 h-8 rounded-lg text-neutral-500 flex items-center justify-center">
+            <MdiIcon icon="mdi-information-outline" size={14} />
+          </div>
+        </div>
+        <div class="rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm flex items-center justify-center py-1.5 text-neutral-500">
+          <MdiIcon icon="mdi-chevron-left" size={14} />
+        </div>
+      </div>
+
+      <div class="flex-1 min-w-0 flex flex-col gap-2">
+        <div class="relative rounded-[14px] overflow-hidden shadow-md min-h-[118px] bg-gradient-to-br from-emerald-900 to-emerald-700 text-white pb-4">
+          <div class="absolute inset-0 opacity-20 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-8 -end-8 w-28 h-28 rounded-full bg-white blur-2xl" />
+            <div class="absolute bottom-0 start-0 w-20 h-20 rounded-full bg-pink-500 blur-2xl" />
+          </div>
+          <div class="relative z-10 p-3 flex items-start justify-between gap-2">
+            <div class="flex-1 min-w-0 text-start">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/30 border border-white/20 text-[6.5px] font-medium text-white/90">
+                <span class="w-1 h-1 rounded-full bg-green-400 animate-pulse" />
+                إدارة الأعمال: الأساسيات في التخطيط والتنظيم والقيادة
+              </span>
+              <h2 class="text-[11px] font-bold mt-1.5 leading-tight">مساء الخير، Admin!</h2>
+              <p class="text-[6.5px] text-white/70 mt-0.5 max-w-[220px] leading-relaxed">
+                نتمنى لك يوماً دراسياً مليئاً بالإنجازات. استمر في التقدم
+              </p>
+              <div class="mt-2.5 flex items-center gap-2.5 text-[7px] text-white/90">
+                <div class="flex flex-col gap-0.5 min-w-[72px]">
+                  <span class="flex items-center gap-1 font-medium">
+                    <MdiIcon icon="mdi-check-circle" size={9} class="opacity-80" />
+                    2 مهام مكتملة
+                  </span>
+                  <div class="h-0.5 w-full bg-white/20 rounded-full overflow-hidden">
+                    <div class="h-full w-[28%] bg-white rounded-full" />
+                  </div>
+                </div>
+                <div class="w-px h-5 bg-white/20" />
+                <div class="flex flex-col gap-0.5 min-w-[56px]">
+                  <span class="flex items-center gap-1 font-medium">
+                    <MdiIcon icon="mdi-book-open-variant" size={9} class="opacity-80" />
+                    1 الوحدات
+                  </span>
+                  <div class="h-0.5 w-full bg-white/20 rounded-full overflow-hidden">
+                    <div class="h-full w-full bg-white rounded-full" />
+                  </div>
+                </div>
+                <div class="w-px h-5 bg-white/20" />
+                <div class="flex flex-col gap-0.5 min-w-[64px]">
+                  <span class="flex items-center gap-1 font-medium">
+                    <MdiIcon icon="mdi-clock-outline" size={9} class="opacity-80" />
+                    5 قيد التقدم
+                  </span>
+                  <div class="h-0.5 w-full bg-white/20 rounded-full overflow-hidden">
+                    <div class="h-full w-[70%] bg-yellow-300 rounded-full" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-end gap-0.5 shrink-0 mt-8 text-white/80 border-s border-white/20 ps-3">
+              <p class="font-mono font-bold text-[13px] leading-none">PM 06:52:56</p>
+              <p class="text-[6.5px] mt-1">Monday, July 13, 2026</p>
+            </div>
+          </div>
+          <div class="absolute bottom-0 inset-x-0 overflow-hidden bg-black/20 py-0.5 opacity-90">
+            <div class="ap-marquee flex items-center gap-4 whitespace-nowrap text-[6.5px] text-white/85 font-medium px-2">
+              <span>مرحبا بكم في منصتنا التعليمية</span>
+              <span>• الامتحان في نهاية شهر 5</span>
+              <span>• ابدأ يومك بذكر الله؛ يُبارك وقتك</span>
+              <span>• مرحبا بكم في منصتنا التعليمية</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-1.5">
+          <div class="relative rounded-[12px] bg-gradient-to-br from-green-50/80 to-green-100/80 dark:from-green-950/30 dark:to-green-900/20 border border-green-200/50 dark:border-green-800/40 p-2 min-h-[72px] overflow-hidden shadow-sm">
+            <div class="flex items-center gap-1">
+              <div class="p-1 rounded-md bg-green-100 dark:bg-green-900/50">
+                <MdiIcon icon="mdi-chart-line" size={10} style="color: #22C55E" />
+              </div>
+              <span class="text-[6.5px] font-bold text-neutral-800 dark:text-neutral-100">نسبة التقدم</span>
+            </div>
+            <div class="mt-2 flex items-end justify-between gap-1">
+              <span class="text-[5.5px] text-neutral-500 leading-tight">2 / 7 المهام المنجزة من الإجمالي</span>
+              <span class="text-[14px] font-black text-green-600 leading-none">28%</span>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 h-1 bg-green-200/60">
+              <div class="h-full w-[28%] bg-green-500" />
+            </div>
+          </div>
+          <div class="rounded-[12px] bg-gradient-to-br from-blue-50/80 to-blue-100/80 dark:from-blue-950/30 dark:to-blue-900/20 border border-blue-200/50 dark:border-blue-800/40 p-2 min-h-[72px] shadow-sm">
+            <div class="flex items-center gap-1">
+              <div class="p-1 rounded-md bg-blue-100 dark:bg-blue-900/50">
+                <MdiIcon icon="mdi-calendar-check" size={10} style="color: #3B82F6" />
+              </div>
+              <span class="text-[6px] font-bold text-neutral-800 dark:text-neutral-100 leading-tight">الوقت المتوقع لإتمام البرنامج</span>
+            </div>
+            <div class="mt-2 flex items-end justify-between gap-1">
+              <div class="flex flex-col">
+                <span class="text-[5.5px] text-neutral-500">التاريخ المتوقع</span>
+                <span class="text-[6.5px] font-bold text-blue-600">2026/7/15</span>
+              </div>
+              <div class="flex items-baseline gap-0.5">
+                <span class="text-[14px] font-black text-blue-600 leading-none">2</span>
+                <span class="text-[6px] font-bold text-blue-500">يومين</span>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[12px] bg-gradient-to-br from-purple-50/80 to-purple-100/80 dark:from-purple-950/30 dark:to-purple-900/20 border border-purple-200/50 dark:border-purple-800/40 p-2 min-h-[72px] shadow-sm">
+            <div class="flex items-center gap-1">
+              <div class="p-1 rounded-md bg-purple-100 dark:bg-purple-900/50">
+                <MdiIcon icon="mdi-timer-outline" size={10} style="color: #A855F7" />
+              </div>
+              <span class="text-[6.5px] font-bold text-neutral-800 dark:text-neutral-100">هدف التدريب اليومي</span>
+            </div>
+            <div class="mt-2 flex items-end justify-between gap-1">
+              <span class="text-[5.5px] text-neutral-500">التقدم في جلسة اليوم</span>
+              <div class="flex items-baseline gap-0.5">
+                <span class="text-[14px] font-black text-emerald-800 leading-none">30</span>
+                <span class="text-[6px] font-bold text-emerald-700">دقيقة</span>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[12px] bg-gradient-to-br from-amber-50/80 to-amber-100/80 dark:from-amber-950/30 dark:to-amber-900/20 border border-amber-200/50 dark:border-amber-800/40 p-2 min-h-[72px] shadow-sm">
+            <div class="flex items-center gap-1">
+              <div class="p-1 rounded-md bg-amber-100 dark:bg-amber-900/50">
+                <MdiIcon icon="mdi-medal-outline" size={10} style="color: #F59E0B" />
+              </div>
+              <span class="text-[6.5px] font-bold text-neutral-800 dark:text-neutral-100">الشهادات</span>
+            </div>
+            <div class="mt-2">
+              <button type="button" class="w-full flex items-center justify-center gap-0.5 py-1 rounded-md bg-neutral-400/80 text-white text-[6px] font-bold cursor-default">
+                <MdiIcon icon="mdi-file-certificate-outline" size={8} />
+                إصدار الشهادة
+              </button>
+              <p class="text-[5.5px] text-neutral-500 mt-1 leading-tight">أكمل جميع المهام للحصول على الشهادة</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-1 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm p-2.5 grid grid-cols-2 gap-2.5 min-h-[240px]">
+          <div class="min-w-0 flex flex-col">
+            <h4 class="text-[9px] font-bold text-neutral-900 dark:text-white px-1 pb-1">
+              مهام قيد التنفيذ
+              <span class="font-normal text-neutral-500 ms-1">(5)</span>
+            </h4>
+            <div class="border-t border-neutral-100 dark:border-neutral-800 pt-1.5 space-y-1.5 flex-1">
+              <div class="flex items-center justify-between px-1.5 py-1 rounded-md bg-neutral-50 dark:bg-neutral-950/40 text-[7px] font-bold text-neutral-800 dark:text-neutral-200">
+                <span class="truncate">- خطة التدريب الخاصة بالبرنامج المحور الأول</span>
+                <MdiIcon icon="mdi-chevron-up" size={10} class="text-neutral-400 shrink-0" />
+              </div>
+              <div class="rounded-lg bg-amber-300 px-2.5 py-2.5 flex items-start gap-1.5 shadow-sm min-h-[42px]">
+                <div class="flex-1 min-w-0">
+                  <p class="text-[7.5px] font-bold text-neutral-900 leading-snug">احضر هذا الدرس : الدرس الأول</p>
+                  <p class="text-[5.5px] text-neutral-700/70 mt-0.5">المحور الأول · 20 دقيقة</p>
+                </div>
+                <MdiIcon icon="mdi-star" size={11} class="text-amber-700/70 shrink-0 mt-0.5" />
+              </div>
+              <div class="rounded-lg bg-amber-200/90 px-2.5 py-2 flex items-start gap-1.5 shadow-sm min-h-[36px]">
+                <div class="flex-1 min-w-0">
+                  <p class="text-[7px] font-bold text-neutral-900 leading-snug">احضر هذا الدرس : الدرس الثاني</p>
+                  <p class="text-[5.5px] text-neutral-700/70 mt-0.5">المحور الأول · 25 دقيقة</p>
+                </div>
+                <MdiIcon icon="mdi-star-outline" size={10} class="text-amber-700/50 shrink-0 mt-0.5" />
+              </div>
+              <div class="rounded-lg border border-amber-200 bg-amber-50 dark:bg-amber-950/20 px-2.5 py-2 flex items-start gap-1.5 min-h-[36px]">
+                <div class="flex-1 min-w-0">
+                  <p class="text-[7px] font-bold text-neutral-800 dark:text-neutral-200 leading-snug">اختبار الوحدة الأولى</p>
+                  <p class="text-[5.5px] text-neutral-500 mt-0.5">10 أسئلة · محاولة واحدة</p>
+                </div>
+                <MdiIcon icon="mdi-file-document-outline" size={10} class="text-amber-600 shrink-0 mt-0.5" />
+              </div>
+              <div class="rounded-lg border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-950/30 px-2.5 py-1.5 flex items-center justify-between text-[6.5px] font-bold text-neutral-700 dark:text-neutral-300">
+                <span>مهام غير إلزامية</span>
+                <MdiIcon icon="mdi-chevron-down" size={10} class="text-neutral-400" />
+              </div>
+            </div>
+          </div>
+          <div class="min-w-0 flex flex-col">
+            <div class="flex items-start justify-between px-1 pb-1">
+              <h4 class="text-[9px] font-bold text-neutral-900 dark:text-white">
+                مهام مكتملة
+                <span class="font-normal text-neutral-500 ms-1">(2)</span>
+              </h4>
+              <div class="relative w-8 h-8 shrink-0">
+                <svg class="w-8 h-8 -rotate-90" viewBox="0 0 32 32" aria-hidden="true">
+                  <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="3" class="text-neutral-100 dark:text-neutral-800" />
+                  <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="75.4" stroke-dashoffset="53.9" class="text-emerald-600" />
+                </svg>
+                <span class="absolute inset-0 flex items-center justify-center text-[6.5px] font-bold text-neutral-700 dark:text-neutral-200">28%</span>
+              </div>
+            </div>
+            <div class="border-t border-neutral-100 dark:border-neutral-800 pt-1.5 space-y-1.5 flex-1">
+              <div class="rounded-lg border border-emerald-100 dark:border-emerald-900/40 bg-emerald-50/60 dark:bg-emerald-950/20 px-2.5 py-2 flex items-center gap-1.5 min-h-[36px]">
+                <div class="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
+                  <MdiIcon icon="mdi-check" size={10} />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-[7px] font-bold text-neutral-800 dark:text-neutral-200 truncate">درس تعريفي بالمحور</p>
+                  <p class="text-[5.5px] text-neutral-500">مكتمل · أمس</p>
+                </div>
+              </div>
+              <div class="rounded-lg border border-emerald-100 dark:border-emerald-900/40 bg-emerald-50/60 dark:bg-emerald-950/20 px-2.5 py-2 flex items-center gap-1.5 min-h-[36px]">
+                <div class="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
+                  <MdiIcon icon="mdi-check" size={10} />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-[7px] font-bold text-neutral-800 dark:text-neutral-200 truncate">مراجعة الدرس الأول</p>
+                  <p class="text-[5.5px] text-neutral-500">مكتمل · اليوم</p>
+                </div>
+              </div>
+              <div class="rounded-lg border border-dashed border-neutral-200 dark:border-neutral-700 px-2.5 py-2 text-center text-[6px] text-neutral-400">
+                أكمل المزيد لإظهارها هنا
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating artifacts — hug the shell (tight offsets, not stage corners) -->
+<div class="absolute -top-3 -start-4 bg-white dark:bg-neutral-900 border border-amber-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float max-w-[168px]">
+  <div class="h-9 w-9 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
+    <MdiIcon icon="mdi-medal-outline" size={18} />
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-amber-600 dark:text-amber-400">الشهادة جاهزة</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">عند اكتمال شروط البرنامج</span>
+    <span class="text-[8px] font-bold text-primary mt-1 flex items-center gap-0.5">
+      تحميل الشهادة <MdiIcon icon="mdi-download" size={9} />
+    </span>
+  </div>
+</div>
+
+<div class="absolute -top-3 -end-5 bg-white dark:bg-neutral-900 border border-rose-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float-delayed max-w-[168px]">
+  <div class="relative h-9 w-9 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-500 shrink-0">
+    <MdiIcon icon="mdi-broadcast" size={18} />
+    <span class="absolute -top-0.5 -end-0.5 w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-rose-600 dark:text-rose-400">محاضرات لايف</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">بث مباشر نشط الآن</span>
+    <span class="text-[8px] font-bold text-neutral-800 dark:text-neutral-200 mt-1">
+      الوحدة الرابعة · انضم الآن
+    </span>
+  </div>
+</div>
+
+<div class="absolute top-[36%] -end-5 bg-white dark:bg-neutral-900 border border-sky-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float max-w-[168px]">
+  <div class="h-9 w-9 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-500 shrink-0">
+    <MdiIcon icon="mdi-chat-processing-outline" size={18} />
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-sky-600 dark:text-sky-400">شات داخلي + متابعة</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">رسالة جديدة من المدرب</span>
+    <span class="text-[8px] font-bold text-neutral-800 dark:text-neutral-200 mt-1 truncate">
+      «راجع الواجب قبل الجلسة»
+    </span>
+  </div>
+</div>
+
+<div class="absolute bottom-6 -end-4 bg-white dark:bg-neutral-900 border border-violet-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float-slow max-w-[168px]">
+  <div class="h-9 w-9 rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-500 shrink-0">
+    <MdiIcon icon="mdi-account-supervisor-outline" size={18} />
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-violet-600 dark:text-violet-400">تتبع ولي الأمر</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">تقرير أسبوعي جاهز</span>
+    <span class="text-[8px] font-bold text-neutral-800 dark:text-neutral-200 mt-1">
+      الحضور 92% · التقدم 28%
+    </span>
+  </div>
+</div>
+
+<div class="absolute bottom-12 -start-4 bg-white dark:bg-neutral-900 border border-emerald-500/30 rounded-2xl p-2.5 shadow-xl flex items-center gap-2.5 z-35 ap-float max-w-[168px]">
+  <div class="relative h-9 w-9 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0">
+    <MdiIcon icon="mdi-bell-ring-outline" size={18} />
+    <span class="absolute -top-1 -end-1 w-3.5 h-3.5 rounded-full bg-emerald-600 text-white text-[7px] font-bold flex items-center justify-center">3</span>
+  </div>
+  <div class="flex flex-col text-start leading-tight min-w-0">
+    <span class="text-[9px] font-black text-emerald-700 dark:text-emerald-400">إشعارات ومتابعة</span>
+    <span class="text-[7px] text-neutral-400 dark:text-neutral-500">جلسة مباشرة بعد ساعتين</span>
+    <span class="text-[8px] font-bold text-neutral-800 dark:text-neutral-200 mt-1">
+      تذكير · واجب · رسالة مدرب
+    </span>
+  </div>
+</div>

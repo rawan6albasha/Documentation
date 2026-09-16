@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://docs.ashara.sa',
+  vite: { plugins: [tailwindcss()] },
   integrations: [
     starlight({
       title: '',
@@ -19,6 +21,21 @@ export default defineConfig({
         tr: { label: 'Türkçe', lang: 'tr', dir: 'ltr' },
       },
             head: [
+        {
+          tag: 'link',
+          attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        },
+        {
+          tag: 'link',
+          attrs: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap',
+          },
+        },
         {
           tag: 'link',
           attrs: {
@@ -59,7 +76,10 @@ sidebar: [
     ],
   },
 ],
-      customCss: ['./src/styles/custom.css'],
+      components: {
+        Hero: './src/components/Hero.astro',
+      },
+      customCss: ['./src/styles/custom.css', './src/styles/tracks-tailwind.css'],
     }),
   ],
 });

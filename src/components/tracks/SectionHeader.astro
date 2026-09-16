@@ -1,0 +1,36 @@
+---
+// Shared section heading for the home page — same visual language as the track cards.
+interface Props {
+  tag: string;
+  title: string;
+  desc?: string;
+  id?: string;
+}
+const { tag, title, desc, id } = Astro.props;
+---
+
+<header class="ap-section-header not-content max-w-2xl text-start">
+  <span class="inline-flex items-center gap-2 rounded-full bg-teal-600/10 px-3.5 py-1 text-xs font-extrabold text-teal-700 ring-1 ring-teal-600/20 dark:bg-teal-400/10 dark:text-teal-300 dark:ring-teal-400/25">
+    <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
+    {tag}
+  </span>
+  <h2 id={id} class="ap-section-title text-2xl font-black leading-snug text-neutral-950 md:text-3xl dark:text-white">
+    {title}
+  </h2>
+  {desc && <p class="ap-section-desc text-sm leading-7 text-neutral-600 md:text-base dark:text-neutral-400">{desc}</p>}
+</header>
+
+<style>
+  /* Unlayered: explicit spacing that no Starlight/utility margin can override. */
+  .ap-section-header {
+    margin-bottom: 2.5rem;
+  }
+  .ap-section-title {
+    margin: 1rem 0 0;
+    border: 0;
+    padding: 0;
+  }
+  .ap-section-desc {
+    margin: 0.75rem 0 0;
+  }
+</style>

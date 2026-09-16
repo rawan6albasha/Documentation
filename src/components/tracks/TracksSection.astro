@@ -1,0 +1,192 @@
+---
+// "المسارات والحلول الرئيسية" — card design ported 1:1 from
+// AudiencePicker.vue (asharamulti), with the documentation site's own copy and links.
+import MdiIcon from './MdiIcon.astro';
+import SectionHeader from './SectionHeader.astro';
+import TrackMockFrame from './TrackMockFrame.astro';
+import TrackMockTraining from './TrackMockTraining.astro';
+import TrackMockTeacher from './TrackMockTeacher.astro';
+import TrackMockBooking from './TrackMockBooking.astro';
+import TrackMockSchool from './TrackMockSchool.astro';
+
+const mocks = {
+  training: TrackMockTraining,
+  teacher: TrackMockTeacher,
+  booking: TrackMockBooking,
+  school: TrackMockSchool,
+} as const;
+
+interface Track {
+  key: keyof typeof mocks;
+  id: string;
+  href: string;
+  icon: string;
+  title: string;
+  desc: string;
+  /** Design height of this mock, from the reference component. */
+  mockHeight: number;
+  cardClass: string;
+  iconClass: string;
+  accentClass: string;
+  glowClass: string;
+}
+
+const href = '/ar/getting-started/currenciescountriescities';
+
+const tracks: Track[] = [
+  {
+    key: 'training',
+    id: 'training',
+    href,
+    icon: 'mdi-storefront-outline',
+    title: 'مراكز التدريب ومنصات التعليم الإلكتروني',
+    desc: 'برامج تدريبية، دورات إلكترونية، متدربون، شهادات، متجر مدمج، وبيع ومتابعة — من لوحة واحدة.',
+    mockHeight: 660,
+    cardClass:
+      'border-emerald-200/80 bg-gradient-to-br from-emerald-50 via-white to-teal-50/80 hover:border-emerald-300 dark:border-emerald-500/20 dark:from-emerald-950/45 dark:via-neutral-950 dark:to-teal-950/30',
+    iconClass: 'bg-emerald-600 shadow-emerald-600/25',
+    accentClass: 'text-emerald-700 dark:text-emerald-300',
+    glowClass: 'bg-emerald-400/25 dark:bg-emerald-500/15',
+  },
+  {
+    key: 'teacher',
+    id: 'ai-tools',
+    href,
+    icon: 'mdi-human-male-board',
+    title: 'أدوات الذكاء الاصطناعي للمعلمين',
+    desc: 'محرر دروس ذكي، اختبارات تُولّد من محتواك، Rubrics، ومتابعة فهم الطلاب — لمن يُعدّ المحتوى بنفسه.',
+    mockHeight: 600,
+    cardClass:
+      'border-violet-200/80 bg-gradient-to-br from-violet-50 via-white to-fuchsia-50/70 hover:border-violet-300 dark:border-violet-500/20 dark:from-violet-950/45 dark:via-neutral-950 dark:to-fuchsia-950/25',
+    iconClass: 'bg-violet-600 shadow-violet-600/25',
+    accentClass: 'text-violet-700 dark:text-violet-300',
+    glowClass: 'bg-violet-400/25 dark:bg-violet-500/15',
+  },
+  {
+    key: 'booking',
+    id: 'booking',
+    href,
+    icon: 'mdi-calendar-clock-outline',
+    title: 'حجوزات الدروس الخاصة والجلسات المباشرة',
+    desc: 'صفحة شخصية، حجوزات وباقات، جلسات مباشرة 1:1 أو جماعية، ودفع مربوط بالمتابعة — دون أدوات خارجية.',
+    mockHeight: 540,
+    cardClass:
+      'border-rose-200/80 bg-gradient-to-br from-rose-50 via-white to-orange-50/70 hover:border-rose-300 dark:border-rose-500/20 dark:from-rose-950/45 dark:via-neutral-950 dark:to-orange-950/30',
+    iconClass: 'bg-rose-500 shadow-rose-500/25',
+    accentClass: 'text-rose-700 dark:text-rose-300',
+    glowClass: 'bg-rose-400/25 dark:bg-rose-500/15',
+  },
+  {
+    key: 'school',
+    id: 'virtual-schools',
+    href,
+    icon: 'mdi-school-outline',
+    title: 'المدارس الافتراضية أونلاين',
+    desc: 'نظام مدرسي رقمي يجمع التعلّم عن بُعد والمتابعة والتقارير وبوابة ولي الأمر والحضور — مدرسة افتراضية كاملة.',
+    mockHeight: 580,
+    cardClass:
+      'border-sky-200/80 bg-gradient-to-br from-sky-50 via-white to-cyan-50/80 hover:border-sky-300 dark:border-sky-500/20 dark:from-sky-950/45 dark:via-neutral-950 dark:to-cyan-950/30',
+    iconClass: 'bg-sky-600 shadow-sky-600/25',
+    accentClass: 'text-sky-700 dark:text-sky-300',
+    glowClass: 'bg-sky-400/25 dark:bg-sky-500/15',
+  },
+];
+---
+
+<section class="ap-section not-content relative" id="tracks">
+  <SectionHeader
+    tag="المسارات والحلول"
+    title="حلول عشرة حسب نوع منصتك"
+    desc="اختر المسار الأقرب لطبيعة عملك، وتعرّف على الأدوات والأدلة المخصصة له."
+  />
+
+  <div class="relative z-10 grid gap-6 pb-10 lg:grid-cols-2 lg:gap-6">
+  {tracks.map((track, index) => {
+    const Mock = mocks[track.key];
+    return (
+      <a
+        href={track.href}
+        id={track.id}
+        class:list={[
+          'ap-track group relative isolate overflow-hidden min-h-[400px] rounded-4xl border p-6 no-underline shadow-[0_24px_70px_-38px_rgba(15,23,42,0.28)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_32px_80px_-36px_rgba(15,23,42,0.38)] md:p-8 dark:shadow-[0_24px_70px_-38px_rgba(0,0,0,0.75)]',
+          track.cardClass,
+        ]}
+        style={`--track-delay:${120 + index * 90}ms`}
+      >
+        <div
+          aria-hidden="true"
+          class:list={[
+            'pointer-events-none absolute -top-20 -end-20 h-56 w-56 rounded-full blur-2xl transition-transform duration-700 group-hover:scale-125 md:blur-3xl',
+            track.glowClass,
+          ]}
+        />
+
+        <div class="relative z-10 grid h-full gap-8 sm:grid-cols-[minmax(0,0.82fr)_minmax(220px,1.18fr)] sm:items-center">
+          <div class="flex h-full flex-col items-start">
+            <div
+              class:list={[
+                'flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg ring-1 ring-white/35',
+                track.iconClass,
+              ]}
+            >
+              <MdiIcon icon={track.icon} size={27} />
+            </div>
+
+            <h3 class="ap-track-title text-xl font-black leading-snug text-neutral-950 md:text-2xl dark:text-white">
+              {track.title}
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-neutral-700 dark:text-neutral-300">{track.desc}</p>
+
+            <span class:list={['mt-auto inline-flex items-center gap-2 pt-6 text-sm font-extrabold', track.accentClass]}>
+              اكتشف المسار
+              <span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/80 shadow-sm transition-transform duration-300 group-hover:-translate-x-1 dark:bg-neutral-950/70">
+                <MdiIcon icon="mdi-arrow-left" size={15} />
+              </span>
+            </span>
+          </div>
+
+          <div class="relative flex min-h-[380px] w-full items-center justify-center overflow-visible" aria-hidden="true">
+            <div class:list={['absolute inset-4 rounded-4xl opacity-50 blur-2xl', track.glowClass]} />
+
+            <div class="relative w-full overflow-visible transition-transform duration-500 group-hover:-rotate-1 group-hover:scale-[1.01]">
+              <TrackMockFrame height={track.mockHeight}>
+                <Mock />
+              </TrackMockFrame>
+            </div>
+          </div>
+        </div>
+      </a>
+    );
+  })}
+  </div>
+</section>
+
+<style>
+  .ap-track {
+    opacity: 0;
+    transform: translateY(32px);
+    animation: ap-track-in 800ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--track-delay, 0ms);
+  }
+
+  /* Unlayered on purpose: must win over any layered utility/reset margin. */
+  .ap-track-title {
+    margin-top: 2.5rem;
+  }
+
+  @keyframes ap-track-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ap-track {
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+    }
+  }
+</style>
