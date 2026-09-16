@@ -283,6 +283,146 @@ header .site-title img {
   margin-top: 0.35rem;
 }
 
+/* صفحة التعريف: تخطيط قراءة هادئ وواضح */
+.ashara-overview-page {
+  width: min(100%, 58rem);
+  margin: 0 auto;
+  padding: 1.5rem 0 3.5rem;
+  color: var(--sl-color-text);
+  font-size: 1.02rem;
+  line-height: 1.95;
+}
+
+.ashara-overview-page > h2 {
+  position: relative;
+  margin: 3.5rem 0 1.25rem;
+  padding: 0.75rem 1.1rem 0.75rem 0;
+  border: 0;
+  border-right: 4px solid var(--sl-color-accent);
+  color: var(--sl-color-text-accent);
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+  line-height: 1.5;
+}
+
+.ashara-overview-page > h2:first-child {
+  margin-top: 0;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 24%, var(--sl-color-gray-5));
+  border-right: 5px solid var(--sl-color-accent);
+  border-radius: 0.85rem;
+  background:
+    radial-gradient(circle at 12% 20%, color-mix(in srgb, var(--sl-color-accent) 14%, transparent), transparent 45%),
+    color-mix(in srgb, var(--sl-color-bg-nav) 72%, transparent);
+  box-shadow: 0 1rem 2.25rem color-mix(in srgb, var(--sl-color-accent) 10%, transparent);
+}
+
+.ashara-overview-page > h3 {
+  margin: 2.4rem 0 0.65rem;
+  padding-bottom: 0.35rem;
+  color: var(--sl-color-accent);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.ashara-overview-page > h3::before {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-left: 0.55rem;
+  border-radius: 50%;
+  background: var(--sl-color-accent);
+  content: '';
+  vertical-align: 0.12em;
+  box-shadow: 0 0 0 0.3rem color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+}
+
+.ashara-overview-page > h4 {
+  margin: 1.8rem 0 0.45rem;
+  color: var(--sl-color-text-accent);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.ashara-overview-page > p {
+  max-width: 50rem;
+  margin: 0 0 1.15rem;
+  color: color-mix(in srgb, var(--sl-color-text) 88%, var(--sl-color-accent));
+}
+
+.ashara-overview-page > ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.2rem 0 1.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.ashara-overview-page > ul > li {
+  position: relative;
+  padding: 0.85rem 1.1rem 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 16%, var(--sl-color-gray-5));
+  border-right: 3px solid var(--sl-color-accent);
+  border-radius: 0.65rem;
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 58%, transparent);
+  color: color-mix(in srgb, var(--sl-color-text) 92%, var(--sl-color-accent));
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.ashara-overview-page > ul > li::before {
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-left: 0.65rem;
+  border-radius: 50%;
+  background: var(--sl-color-accent);
+  content: '';
+  vertical-align: 0.08em;
+}
+
+.ashara-overview-page > ul > li:hover {
+  transform: translateX(-0.25rem);
+  border-color: color-mix(in srgb, var(--sl-color-accent) 42%, var(--sl-color-gray-5));
+  background: color-mix(in srgb, var(--sl-color-accent) 8%, var(--sl-color-bg-nav));
+}
+
+.ashara-overview-page > h2:not(:first-child)::after {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin-top: 0.55rem;
+  border-radius: 999px;
+  background: var(--sl-color-accent);
+  content: '';
+  opacity: 0.65;
+}
+
+:root[data-theme='light'] .ashara-overview-page > h2:first-child {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(13, 148, 136, 0.12), transparent 45%),
+    rgba(234, 246, 242, 0.82);
+}
+
+@media (max-width: 50rem) {
+  .ashara-overview-page {
+    padding: 0.25rem 0 2rem;
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .ashara-overview-page > h2 {
+    margin-top: 2.4rem;
+    padding-right: 0.8rem;
+  }
+
+  .ashara-overview-page > h2:first-child {
+    padding: 1rem;
+  }
+
+  .ashara-overview-page > ul > li {
+    padding: 0.75rem 0.85rem;
+  }
+}
+
 /* الهيرو الرئيسي */
 .content-panel:has(> .sl-container > .hero) > .sl-container {
   width: 100%;
