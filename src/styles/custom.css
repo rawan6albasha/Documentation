@@ -283,6 +283,465 @@ header .site-title img {
   margin-top: 0.35rem;
 }
 
+/* بطاقات دليل الموديولات: نفس لغة الهيرو مع كثافة مناسبة للقراءة */
+.ashara-modules-page {
+  --module-card-bg: color-mix(in srgb, var(--sl-color-bg-nav) 78%, var(--sl-color-bg));
+  --module-card-line: color-mix(in srgb, var(--sl-color-accent) 18%, var(--sl-color-gray-5));
+  padding-bottom: 3rem;
+}
+
+.ashara-modules-page > h2 {
+  margin-top: 2.75rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 22%, var(--sl-color-gray-5));
+  border-right: 5px solid var(--sl-color-accent);
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 8% 20%, color-mix(in srgb, var(--sl-color-accent) 17%, transparent), transparent 38%),
+    linear-gradient(135deg, color-mix(in srgb, var(--sl-color-accent) 9%, var(--sl-color-bg-nav)), var(--sl-color-bg-nav));
+  color: var(--sl-color-text-accent);
+}
+
+.ashara-modules-page > h3 {
+  position: relative;
+  margin-top: 3rem;
+  padding: 0.5rem 1rem 0.65rem 0;
+  border: 0;
+  color: var(--sl-color-text-accent);
+}
+
+.ashara-modules-page > h3::after {
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  margin-top: 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--sl-color-accent), var(--sl-color-accent-high));
+  content: '';
+}
+
+.ashara-modules-page .starlight-aside {
+  margin: 0.5rem 0 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 20%, var(--sl-color-gray-5));
+  border-inline-start: 4px solid var(--sl-color-accent);
+  border-radius: 0.85rem;
+  background: color-mix(in srgb, var(--sl-color-accent) 6%, var(--sl-color-bg-nav));
+  box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--sl-color-accent) 8%, transparent);
+}
+
+.ashara-modules-page .starlight-aside__title {
+  color: var(--sl-color-text-accent);
+}
+
+.ashara-modules-page .card-grid {
+  gap: 1rem;
+  margin: 1.25rem 0 2.75rem;
+}
+
+.ashara-modules-page .card-grid > .card {
+  min-height: 100%;
+  border: 1px solid var(--module-card-line);
+  border-radius: 1rem;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--sl-card-bg) 70%, var(--module-card-bg)), var(--module-card-bg));
+  box-shadow: 0 1rem 2.5rem -1.75rem color-mix(in srgb, var(--sl-color-accent) 38%, transparent);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.ashara-modules-page .card-grid > .card:hover {
+  border-color: color-mix(in srgb, var(--sl-card-border) 62%, var(--sl-color-accent));
+  box-shadow: 0 1.25rem 2.75rem -1.5rem color-mix(in srgb, var(--sl-card-border) 42%, transparent);
+  transform: translateY(-0.2rem);
+}
+
+/* .ashara-modules-page .card-grid > .card .title { */
+  /* color: var(--sl-color-text-accent); */
+  /* font-size: 1.02rem; */
+/* } */
+
+.ashara-modules-page .card-grid > .card .body {
+  color: color-mix(in srgb, var(--sl-color-text) 86%, var(--sl-color-accent));
+  line-height: 1.85;
+}
+
+.ashara-modules-page .card-grid > .card .icon {
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.48rem;
+  color: #fff;
+  background: var(--sl-card-border);
+  box-shadow: 0 0.45rem 1rem color-mix(in srgb, var(--sl-card-border) 25%, transparent);
+}
+
+/* .ashara-modules-page .card-grid > .card:nth-child(4n + 2) .icon { */
+  /* background: #0e7490; */
+/* } */
+
+/* .ashara-modules-page .card-grid > .card:nth-child(4n + 3) .icon { */
+  /* background: #7c3aed; */
+/* } */
+
+.ashara-modules-page .card-grid > .card:nth-child(4n + 4) .icon {
+  background: #e11d48;
+}
+
+@media (max-width: 50rem) {
+  .ashara-modules-page > h2 {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .ashara-modules-page > h3 {
+    margin-top: 2.25rem;
+  }
+
+  .ashara-modules-page .card-grid {
+    margin-bottom: 2rem;
+  }
+}
+
+/* لوحة الضوء: ألوان موحدة وهادئة بدل تنافس الألوان داخل الكروت */
+:root[data-theme='light'] .ashara-modules-page .card-grid > .card,
+:root[data-theme='light'] .ashara-overview-page .card-grid > .card {
+  --module-card-bg: #ffffff;
+  --module-card-line: #cfe5df;
+  background: linear-gradient(145deg, #ffffff 0%, #f2faf7 100%);
+  box-shadow: 0 1rem 2.5rem -1.75rem rgba(13, 92, 82, 0.34);
+}
+
+:root[data-theme='light'] .ashara-modules-page .card-grid > .card:nth-child(4n + 1),
+:root[data-theme='light'] .ashara-overview-page .card-grid > .card:nth-child(4n + 1) {
+  --sl-card-border: #0d9488;
+  --sl-card-bg: #e4f6f1;
+}
+
+:root[data-theme='light'] .ashara-modules-page .card-grid > .card:nth-child(4n + 2),
+:root[data-theme='light'] .ashara-overview-page .card-grid > .card:nth-child(4n + 2) {
+  --sl-card-border: #0e7490;
+  --sl-card-bg: #e5f5f8;
+}
+
+:root[data-theme='light'] .ashara-modules-page .card-grid > .card:nth-child(4n + 3),
+:root[data-theme='light'] .ashara-overview-page .card-grid > .card:nth-child(4n + 3) {
+  --sl-card-border: #b7791f;
+  --sl-card-bg: #fff5d9;
+}
+
+:root[data-theme='light'] .ashara-modules-page .card-grid > .card:nth-child(4n + 4),
+:root[data-theme='light'] .ashara-overview-page .card-grid > .card:nth-child(4n + 4) {
+  --sl-card-border: #c2415d;
+  --sl-card-bg: #fff0f1;
+}
+
+:root[data-theme='light'] .ashara-modules-page .card-grid > .card:nth-child(4n + 2) .icon,
+:root[data-theme='light'] .ashara-overview-page .card-grid > .card:nth-child(4n + 2) .icon {
+  background: #0e7490;
+}
+
+:root[data-theme='light'] .ashara-modules-page .card-grid > .card:nth-child(4n + 3) .icon,
+:root[data-theme='light'] .ashara-overview-page .card-grid > .card:nth-child(4n + 3) .icon {
+  background: #b7791f;
+}
+
+:root[data-theme='light'] .ashara-modules-page .card-grid > .card:nth-child(4n + 4) .icon,
+:root[data-theme='light'] .ashara-overview-page .card-grid > .card:nth-child(4n + 4) .icon {
+  background: #c2415d;
+}
+
+/* نفس أسلوب الكروت في صفحة التعريف */
+.ashara-overview-page .card-grid {
+  gap: 1rem;
+  margin: 1.25rem 0 2.75rem;
+}
+
+.ashara-overview-page .card-grid > .card {
+  min-height: 100%;
+  border: 1px solid var(--module-card-line, var(--sl-color-gray-5));
+  border-radius: 1rem;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--sl-card-bg) 70%, var(--sl-color-bg-nav)), var(--sl-color-bg-nav));
+  box-shadow: 0 1rem 2.5rem -1.75rem color-mix(in srgb, var(--sl-color-accent) 38%, transparent);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.ashara-overview-page .card-grid > .card:hover {
+  border-color: color-mix(in srgb, var(--sl-card-border) 62%, var(--sl-color-accent));
+  box-shadow: 0 1.25rem 2.75rem -1.5rem color-mix(in srgb, var(--sl-card-border) 42%, transparent);
+  transform: translateY(-0.2rem);
+}
+
+.ashara-overview-page .card-grid > .card .title {
+  /* color: var(--sl-color-text-accent); */
+  /* font-size: 1.02rem; */
+  font-weight: 700;
+}
+
+.ashara-overview-page .card-grid > .card .body {
+  color: color-mix(in srgb, var(--sl-color-text) 86%, var(--sl-color-accent));
+  line-height: 1.85;
+}
+
+.ashara-overview-page .card-grid > .card .icon {
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.48rem;
+  color: #fff;
+  background: var(--sl-card-border);
+  box-shadow: 0 0.45rem 1rem color-mix(in srgb, var(--sl-card-border) 25%, transparent);
+}
+
+.ashara-guide-page h2,
+.ashara-guide-page h3,
+.ashara-overview-page h2,
+.ashara-overview-page h3 {
+  font-weight: 700;
+}
+
+/* دليل العملات: تنظيم الجداول والفيديوهات داخل الخطوات */
+.ashara-currency-page {
+  --currency-line: color-mix(in srgb, var(--sl-color-accent) 18%, var(--sl-color-gray-5));
+}
+
+.ashara-currency-page > blockquote:first-of-type {
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--currency-line);
+  border-inline-start: 5px solid var(--sl-color-accent);
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 8% 20%, color-mix(in srgb, var(--sl-color-accent) 12%, transparent), transparent 38%),
+    color-mix(in srgb, var(--sl-color-bg-nav) 82%, var(--sl-color-bg));
+  box-shadow: 0 1rem 2.5rem -2rem color-mix(in srgb, var(--sl-color-accent) 38%, transparent);
+}
+
+.ashara-currency-page > h2 {
+  margin-top: 3rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--currency-line);
+  border-inline-start: 5px solid var(--sl-color-accent);
+  border-radius: 0.9rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--sl-color-accent) 8%, var(--sl-color-bg-nav)), transparent);
+}
+
+.ashara-currency-page > h3 {
+  margin-top: 2.4rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--currency-line);
+  color: var(--sl-color-text-accent);
+}
+
+.ashara-currency-page .starlight-steps {
+  margin-block: 1.5rem 2rem;
+  padding-inline-end: 0.75rem;
+}
+
+.ashara-currency-page .starlight-steps > li {
+  padding-bottom: 1.5rem;
+}
+
+.ashara-currency-page .starlight-steps > li > p:first-child {
+  font-weight: 600;
+  color: var(--sl-color-text-accent);
+}
+
+.ashara-currency-page table {
+  display: table;
+  width: 100%;
+  margin: 1.25rem 0 1.75rem;
+  overflow: hidden;
+  border: 1px solid var(--currency-line);
+  border-radius: 0.85rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 88%, transparent);
+  font-size: 0.95rem;
+}
+
+.ashara-currency-page table th {
+  color: var(--sl-color-white);
+  background: var(--sl-color-accent-low);
+  font-weight: 700;
+}
+
+.ashara-currency-page table th,
+.ashara-currency-page table td {
+  padding: 0.8rem 0.9rem;
+  border: 0;
+  border-bottom: 1px solid var(--currency-line);
+  text-align: right;
+  vertical-align: top;
+}
+
+.ashara-currency-page table tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--sl-color-accent) 5%, transparent);
+}
+
+.ashara-currency-page table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.ashara-currency-page .ashara-doc-video {
+  margin: 1rem auto 1.5rem;
+  border: 1px solid var(--currency-line);
+  border-radius: 1rem;
+  background: var(--sl-color-bg-nav);
+  box-shadow: 0 1rem 2.5rem -1.75rem color-mix(in srgb, var(--sl-color-accent) 48%, transparent);
+}
+
+.ashara-currency-page .ashara-quiet-notes {
+  display: grid;
+  gap: 0.65rem;
+}
+
+@media (max-width: 50rem) {
+  .ashara-currency-page > h2 {
+    padding: 0.8rem;
+  }
+
+  .ashara-currency-page table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .ashara-currency-page table th,
+  .ashara-currency-page table td {
+    min-width: 10rem;
+  }
+}
+
+/* دليل الهوية والتصميم: ترتيب إعدادات الموقع ضمن رحلة قراءة واحدة */
+.ashara-design-settings-page {
+  --design-line: color-mix(in srgb, var(--sl-color-accent) 18%, var(--sl-color-gray-5));
+}
+
+.ashara-design-settings-page .ashara-section-header {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.ashara-design-settings-page > h2 {
+  margin-top: 3rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--design-line);
+  border-inline-start: 5px solid var(--sl-color-accent);
+  border-radius: 0.9rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--sl-color-accent) 8%, var(--sl-color-bg-nav)), transparent);
+  color: var(--sl-color-text-accent);
+}
+
+.ashara-design-settings-page > h2:first-of-type {
+  margin-top: 0;
+}
+
+.ashara-design-settings-page > h2 + p {
+  max-width: 52rem;
+  margin-top: 0.85rem;
+  color: color-mix(in srgb, var(--sl-color-text) 86%, var(--sl-color-accent));
+  line-height: 1.9;
+}
+
+.ashara-design-settings-page > ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.25rem 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.ashara-design-settings-page > ul > li {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 14%, var(--sl-color-gray-5));
+  border-inline-start: 3px solid var(--sl-color-accent);
+  border-radius: 0.65rem;
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 70%, transparent);
+}
+
+.ashara-design-settings-page .starlight-steps {
+  margin-block: 1.5rem 2rem;
+  padding-inline-end: 0.75rem;
+}
+
+.ashara-design-settings-page .starlight-steps > li {
+  padding-bottom: 1.5rem;
+}
+
+.ashara-design-settings-page .starlight-steps > li > p:first-child {
+  font-weight: 600;
+  color: var(--sl-color-text-accent);
+}
+
+.ashara-design-settings-page table {
+  display: table;
+  width: 100%;
+  margin: 1.25rem 0 1.75rem;
+  overflow: hidden;
+  border: 1px solid var(--design-line);
+  border-radius: 0.85rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 88%, transparent);
+  font-size: 0.95rem;
+}
+
+.ashara-design-settings-page table th {
+  color: var(--sl-color-white);
+  background: var(--sl-color-accent-low);
+  font-weight: 700;
+}
+
+.ashara-design-settings-page table th,
+.ashara-design-settings-page table td {
+  padding: 0.8rem 0.9rem;
+  border: 0;
+  border-bottom: 1px solid var(--design-line);
+  text-align: right;
+  vertical-align: top;
+}
+
+.ashara-design-settings-page table tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--sl-color-accent) 5%, transparent);
+}
+
+.ashara-design-settings-page table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.ashara-design-settings-page .ashara-doc-video {
+  margin: 1rem auto 1.5rem;
+  border: 1px solid var(--design-line);
+  border-radius: 1rem;
+  background: var(--sl-color-bg-nav);
+  box-shadow: 0 1rem 2.5rem -1.75rem color-mix(in srgb, var(--sl-color-accent) 48%, transparent);
+}
+
+.ashara-design-settings-page .ashara-quiet-notes {
+  display: grid;
+  gap: 0.65rem;
+}
+
+@media (max-width: 50rem) {
+  .ashara-design-settings-page > h2 {
+    padding: 0.8rem;
+  }
+
+  .ashara-design-settings-page table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .ashara-design-settings-page table th,
+  .ashara-design-settings-page table td {
+    min-width: 10rem;
+  }
+}
+
 /* صفحة التعريف: تخطيط قراءة هادئ وواضح */
 .ashara-overview-page {
   width: min(100%, 58rem);

@@ -70,11 +70,12 @@ sidebar: [
   {
     label: 'التجهيز والإعدادات',
     items: [
-      { slug: 'getting-started/overview', label: 'نظرة عامة عن منصة عشرة' },
       { slug: 'getting-started/indexv1', label: 'نموذج أولي للفهرس' },
-     { slug: 'getting-started/currenciescountriescities', label: 'العملات والدول والمدن' },
-     { slug: 'getting-started/choosing-usage-model-preparing-institution-before-launch', label: 'اختيار نموذج الاستخدام وإعداد المؤسسة قبل الإطلاق' },
-    ],
+      { slug: 'getting-started/overview', label: 'نظرة عامة عن منصة عشرة' },
+      { slug: 'getting-started/choosing-usage-model-preparing-institution-before-launch', label: 'نموذج الاستخدام وإعداد المنصة قبل الإطلاق' },
+      { slug: 'getting-started/identity-language-seo-logo', label: 'الهوية واللغة والسيو والشعار' },
+      { slug: 'getting-started/currenciescountriescities', label: 'العملات والدول والمدن' },
+  ],
   },
 ],
       components: {
