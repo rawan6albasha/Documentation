@@ -320,17 +320,24 @@ header .site-title img {
   content: '';
 }
 
-.ashara-modules-page .starlight-aside {
-  margin: 0.5rem 0 1.25rem;
-  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 20%, var(--sl-color-gray-5));
-  border-inline-start: 4px solid var(--sl-color-accent);
-  border-radius: 0.85rem;
-  background: color-mix(in srgb, var(--sl-color-accent) 6%, var(--sl-color-bg-nav));
-  box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--sl-color-accent) 8%, transparent);
+
+.ashara-modules-page .ashara-module-intro {
+  position: relative;
+  margin: 0.2rem 0 1.4rem;
+  padding: 0.85rem 1rem 0.85rem 0;
+  /* border-bottom: 1px solid color-mix(in srgb, var(--sl-color-accent) 16%, var(--sl-color-gray-5)); */
+  border-inline-start: 3px solid var(--sl-color-accent);
+  color: color-mix(in srgb, var(--sl-color-text) 86%, var(--sl-color-accent));
+  line-height: 1.9;
 }
 
-.ashara-modules-page .starlight-aside__title {
+.ashara-modules-page .ashara-module-intro::before {
+  display: block;
+  margin-bottom: 0.25rem;
   color: var(--sl-color-text-accent);
+  content: 'ملخص الموديول';
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .ashara-modules-page .card-grid {
@@ -619,11 +626,6 @@ header .site-title img {
 /* دليل الهوية والتصميم: ترتيب إعدادات الموقع ضمن رحلة قراءة واحدة */
 .ashara-design-settings-page {
   --design-line: color-mix(in srgb, var(--sl-color-accent) 18%, var(--sl-color-gray-5));
-}
-
-.ashara-design-settings-page .ashara-section-header {
-  margin-top: 0;
-  margin-bottom: 2rem;
 }
 
 .ashara-design-settings-page > h2 {

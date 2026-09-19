@@ -1,10 +1,9 @@
 ---
-title: "كيف تختار نموذج الاستخدام المناسب داخل عشرة؟"
+title: "نموذج الاستخدام وإعداد المنصة قبل الإطلاق"
 description: "تعرّف على الموديولات الرئيسية في منصة عشرة والميزات التي يمكنك استخدامها، ثم جهّز الإعدادات الأساسية قبل إطلاق منصتك."
 ---
 
-import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
-import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro';
+import { Card, CardGrid, Steps } from '@astrojs/starlight/components';
 
 <div class="ashara-guide-page ashara-modules-page">
 
@@ -16,22 +15,18 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ---
 
-<GuideSectionHeader
-  tag="خريطة المنصة"
-  title="الموديولات والميزات المتاحة"
-  desc="استكشف الأنظمة الرئيسية وحدد ما تحتاجه قبل الانتقال إلى إعداد المنصة."
-  icon="mdi-book-open-page-variant"
-/>
-
 ## الموديولات والميزات المتاحة
+
+
 
 ### الدورات والبرامج التدريبية
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+
+<div class="ashara-module-intro">
 
 يمكنك إدارة الدورة من مرحلة الإنشاء وحتى النشر والمتابعة، بما يشمل تنظيم المحتوى، وإضافة التقييمات والمهام، ومتابعة أداء المتعلمين.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="إنشاء الدورات والمحتوى" icon="open-book">
@@ -71,11 +66,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### المدرسة الذكية
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 يمكنك إدارة الهيكل الأكاديمي للمدرسة ومتابعة الطلاب والمعلمين والحصص والمحتوى والأنشطة التعليمية، بدءًا من إنشاء الهيكل الدراسي ووصولًا إلى متابعة الطلاب والحصص.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="إدارة المدارس والسنوات الدراسية" icon="desktop">
@@ -107,11 +102,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### الجلسات المباشرة
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 يمكنك إنشاء الجلسات وإدارتها ومتابعة حالتها من الجلسات القادمة إلى الجلسات المنتهية، مع إدارة إعدادات الجلسة ومتابعة حضور المشاركين والتسجيلات.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="إعداد جلسات Zoom" icon="setting">
@@ -143,11 +138,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### الدروس الخاصة والحجوزات
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 يمكنك عرض المواد والخدمات التعليمية وتنظيم المواعيد والأسعار والحجوزات، مع ربط الحجز بتوفر المعلم وعملية الدفع.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="كتالوج المواد والخدمات" icon="document">
@@ -179,11 +174,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### المتجر التعليمي
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 يمكنك إدارة المنتجات التعليمية الرقمية والفيزيائية، إلى جانب البائعين والمخزون والطلبات والمراجعات والسحوبات، مع توفير تجربة شراء متكاملة للمستخدم.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="المنتجات التعليمية" icon="database">
@@ -219,11 +214,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### بوابة ولي الأمر
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 توفر البوابة لولي الأمر إمكانية متابعة الأبناء والاطلاع على تقدمهم الدراسي والمهام والاختبارات والحضور، إلى جانب المعلومات المتعلقة بالتسجيل والمدفوعات والاشتراكات.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="متابعة الأبناء" icon="notes">
@@ -251,11 +246,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### الشهادات
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 يمكنك إنشاء نماذج متعددة للشهادات وربطها بالدورات، ثم إصدار الشهادات للطلاب باستخدام بيانات الطالب والدورة.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="قوالب الشهادات" icon="document">
@@ -279,11 +274,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### الكوبونات
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 يمكنك إنشاء أكواد خصم وتحديد قيمتها ومدة استخدامها وحد الاستخدام، ثم متابعة عدد مرات استخدامها ضمن عمليات البيع.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="إنشاء كوبون" icon="add-document">
@@ -311,11 +306,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### المحفظة
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 يمكنك إدارة الرصيد والمعاملات والدفع، مع الاحتفاظ بسجل للحركات المالية المرتبطة بالمستخدم، واستخدام المحفظة في شراء الدورات والخدمات والبرامج.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="الرصيد والحركات" icon="database">
@@ -347,11 +342,11 @@ import GuideSectionHeader from '../../../../components/GuideSectionHeader.astro'
 
 ### التسويق بالعمولة
 
-<Aside type="note" title="ماذا يوفر هذا الموديول؟">
+<div class="ashara-module-intro">
 
 يمكنك إدارة المسوقين وروابط الإحالة والعمولات، ومتابعة الأداء والنتائج المرتبطة بالتسويق بالعمولة.
 
-</Aside>
+</div>
 
 <CardGrid>
   <Card title="المسوقون" icon="notes">
