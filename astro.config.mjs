@@ -76,6 +76,7 @@ sidebar: [
       { slug: 'getting-started/identity-language-seo-logo', label: 'الهوية واللغة والسيو والشعار' },
       { slug: 'getting-started/currenciescountriescities', label: 'العملات والدول والمدن' },
       { slug: 'getting-started/data-deletion-and-retention', label: 'حذف البيانات والاحتفاظ بها' },
+      { slug: 'getting-started/login-and-social-login-page', label: 'صفحة تسجيل الدخول والدخول الاجتماعي' },
   ],
   },
 ],
