@@ -247,6 +247,73 @@ header .site-title img {
   font-weight: 600;
 }
 
+.ashara-notifications-page {
+  --notifications-line: color-mix(in srgb, var(--sl-color-accent) 18%, var(--sl-color-gray-5));
+}
+
+.ashara-notifications-page > h2:first-of-type {
+  margin-top: 0;
+}
+
+.ashara-notifications-page .starlight-steps a {
+  font-weight: 600;
+}
+
+.ashara-notifications-page .starlight-steps > li > p:not(:first-child) {
+  margin-block: 0.45rem;
+}
+
+.ashara-notifications-page > table {
+  border-color: var(--notifications-line);
+}
+
+.ashara-auth-page {
+  --auth-line: color-mix(in srgb, var(--sl-color-accent) 18%, var(--sl-color-gray-5));
+}
+
+.ashara-auth-page > h2:first-of-type {
+  margin-top: 0;
+}
+
+.ashara-auth-page > h2 {
+  margin-bottom: 1rem;
+}
+
+.ashara-auth-page > h3 {
+  color: var(--sl-color-text-accent);
+}
+
+.ashara-auth-page > ul {
+  margin-block: 0.85rem 1.25rem;
+}
+
+.ashara-auth-page > ul li {
+  margin-block: 0.5rem;
+}
+
+.ashara-auth-page > .starlight-aside {
+  margin-block: 1.4rem 1.8rem;
+  border-inline-start-width: 4px;
+  border-color: var(--auth-line);
+}
+
+.ashara-auth-page .ashara-doc-video {
+  margin-block: 1.5rem 2rem;
+}
+
+@media (max-width: 40rem) {
+  .ashara-notifications-page > table {
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+  }
+
+  .ashara-notifications-page > table th,
+  .ashara-notifications-page > table td {
+    min-width: 10rem;
+  }
+}
+
 .ashara-guide-page .ashara-quiet-notes .starlight-aside {
   margin: 1.25rem 0;
   padding: 0.75rem 1rem;

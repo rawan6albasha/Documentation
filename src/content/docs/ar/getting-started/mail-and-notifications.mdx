@@ -4,7 +4,18 @@ description: "إعداد قنوات إرسال البريد والرسائل ا�
 ---
 
 import { Aside, Steps } from '@astrojs/starlight/components';
+import gif1 from '../../../../assets/mail-and-notifications/gif1.mp4';
+import gif1Light from '../../../../assets/mail-and-notifications/gif1-1.mp4';
+import gif2 from '../../../../assets/mail-and-notifications/gif2.mp4';
+import gif2Light from '../../../../assets/mail-and-notifications/gif2-2.mp4';
+import gif3 from '../../../../assets/mail-and-notifications/gif3.mp4';
+import gif3Light from '../../../../assets/mail-and-notifications/gif3-3.mp4';
+import gif4 from '../../../../assets/mail-and-notifications/gif4.mp4';
+import gif4Light from '../../../../assets/mail-and-notifications/gif4-4.mp4';
+import gif5 from '../../../../assets/mail-and-notifications/gif5.mp4';
+import gif5Light from '../../../../assets/mail-and-notifications/gif5-5.mp4';
 
+<div class="ashara-guide-page ashara-notifications-page">
 
 ## لماذا تحتاج إلى إعداد البريد والإشعارات؟
 
@@ -25,30 +36,34 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
 لإعداد الإشعارات بالترتيب، ابدأ بتجهيز طريقة الإرسال التي تريد استخدامها، ثم فعّل الإشعارات المرتبطة بها.
 
-### 1. إعداد البريد الإلكتروني
+<Steps>
 
-جهّز البريد الذي ستستخدمه المنصة لإرسال الرسائل، ثم اختبر الإعداد قبل الاعتماد عليه.
+1. **إعداد البريد الإلكتروني**
 
-[انتقل إلى إعداد البريد الإلكتروني](#1-إعداد-البريد-الإلكتروني)
+   جهّز البريد الذي ستستخدمه المنصة لإرسال الرسائل، ثم اختبر الإعداد قبل الاعتماد عليه.
 
-### 2. إعداد الرسائل النصية (SMS)
+   [انتقل إلى إعداد البريد الإلكتروني](#1-إعداد-البريد-الإلكتروني)
 
-إذا كنت تريد إرسال الإشعارات عبر الرسائل النصية، جهّز مزود SMS وحدده كمزود افتراضي، ثم فعّل إرسال إشعارات SMS.
+2. **إعداد الرسائل النصية (SMS)**
 
-[انتقل إلى إعداد مزود الرسائل](#2-إعداد-مزود-الرسائل-النصية-sms)  
-[انتقل إلى تفعيل إشعارات SMS](#3-تفعيل-إرسال-إشعارات-sms)
+   إذا كنت تريد إرسال الإشعارات عبر الرسائل النصية، جهّز مزود SMS وحدده كمزود افتراضي، ثم فعّل إرسال إشعارات SMS.
 
-### 3. ترتيب إعداد الإشعارات
+   [انتقل إلى إعداد مزود الرسائل](#2-إعداد-مزود-الرسائل-النصية-sms)  
+   [انتقل إلى تفعيل إشعارات SMS](#3-تفعيل-إرسال-إشعارات-sms)
 
-لضمان عمل الإشعارات بشكل صحيح، جهّز القنوات التي ستستخدمها أولًا، ثم اختر الأحداث التي تريد إرسال إشعارات عنها.
+3. **تفعيل إشعارات النظام**
 
-[انتقل إلى إعداد إشعارات النظام](#4-تفعيل-إشعارات-النظام)
+   لضمان عمل الإشعارات بشكل صحيح، جهّز القنوات التي ستستخدمها أولًا، ثم اختر الأحداث التي تريد إرسال إشعارات عنها.
 
-### 4. إعداد Firebase
+   [انتقل إلى إعداد إشعارات النظام](#4-تفعيل-إشعارات-النظام)
 
-إذا كنت تريد ظهور الإشعارات مباشرة على أجهزة المستخدمين، مثل إشعارات واتساب أو فيسبوك، أكمل إعداد Firebase.
+4. **إعداد Firebase**
 
-[انتقل إلى إعداد إشعارات Firebase](#5-إعداد-إشعارات-firebase)
+   إذا كنت تريد ظهور الإشعارات مباشرة على أجهزة المستخدمين، مثل إشعارات واتساب أو فيسبوك، أكمل إعداد Firebase.
+
+   [انتقل إلى إعداد إشعارات Firebase](#5-إعداد-إشعارات-firebase)
+
+</Steps>
 
 <Aside type="note">
 لا تحتاج إلى إعداد جميع طرق الإرسال. أكمل فقط الإعدادات المرتبطة بطرق الإرسال والإشعارات التي تريد استخدامها في منصتك.
@@ -63,6 +78,9 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 انتقل إلى:
 
 **الإعدادات ← إعدادات الموقع ← البريد**
+
+   <video class="ashara-doc-video gif1-light" src={gif1Light} autoPlay loop muted playsInline></video>
+   <video class="ashara-doc-video gif1-dark" src={gif1} autoPlay loop muted playsInline></video>
 
 ### أدخل بيانات البريد الأساسية
 
@@ -83,7 +101,7 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 | **Local Server / Sendmail** | إرسال البريد من خلال خدمة الإرسال المحلية المتوفرة للمنصة، دون إدخال بيانات مزود بريد خارجي. | استخدمه عندما تريد الاعتماد على خدمة الإرسال المحلية المتوفرة في المنصة. |
 | **Log** | تسجيل رسائل البريد في سجلات النظام بدل إرسالها فعليًا. | استخدمه أثناء التجربة أو الاختبار عندما تريد التأكد من إنشاء الرسائل دون إرسالها إلى المستخدمين. |
 
-بعد اختيار الـ **Driver** تظهر الحقول الخاصة بطريقة الإرسال التي اخترتها.
+بعد اختيار الـ **Mail Driver** تظهر الحقول الخاصة بطريقة الإرسال التي اخترتها.
 
 #### عند اختيار Amazon SES
 
@@ -103,8 +121,6 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 * **Username**
 * **Password**
 
-أما **Local Server / Sendmail** و **Log** فلا تظهر لهما حقول إضافية.
-
 ### اختبر البريد
 
 بعد الانتهاء من إعداد البريد، استخدم حقل بريد الاختبار ثم اضغط:
@@ -117,11 +133,15 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
 ## 2. إعداد مزود الرسائل النصية (SMS)
 
-إذا كنت تريد إرسال الإشعارات عبر الرسائل النصية، جهّز مزود SMS قبل تفعيل إشعارات SMS.
+إذا كنت تريد إرسال الإشعارات عبر الرسائل النصية، جهّز مزود SMS  لتفعيل إشعارات SMS في المنصة:
 
 انتقل إلى:
 
 **الإعدادات ← إعدادات الموقع ← الرسائل**
+
+   <video class="ashara-doc-video gif2-light" src={gif2Light} autoPlay loop muted playsInline></video>
+   <video class="ashara-doc-video gif2-dark" src={gif2} autoPlay loop muted playsInline></video>
+
 
 ستجد مجموعة من مزودي SMS. يختلف عدد الحقول وطريقة إعدادها حسب المزود.
 
@@ -169,6 +189,10 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
 عند تفعيل هذا الخيار، ترسل المنصة إشعارات النظام التي فعّلتها للمستخدمين عبر الرسائل النصية.
 
+   <video class="ashara-doc-video gif3-light" src={gif3Light} autoPlay loop muted playsInline></video>
+   <video class="ashara-doc-video gif3-dark" src={gif3} autoPlay loop muted playsInline></video>
+
+
 حتى تصل الرسالة إلى المستخدم، يجب أن يكون **رقم هاتفه مضافًا إلى حسابه**. إذا لم يكن لدى المستخدم رقم هاتف مسجل، فلن تتمكن المنصة من إرسال إشعار SMS إليه.
 
 ستجد أيضًا حقل:
@@ -192,6 +216,11 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 **الإعدادات ← إعدادات الموقع ← الإشعارات**
 
 تظهر الإشعارات بحسب الدور والميزات المستخدمة في المنصة. أمام كل إشعار مفتاح تشغيل وإيقاف، ويمكنك تفعيل الإشعارات المرتبطة بالعمليات التي تحتاج إلى متابعتها.
+
+
+   <video class="ashara-doc-video gif4-light" src={gif4Light} autoPlay loop muted playsInline></video>
+   <video class="ashara-doc-video gif4-dark" src={gif4} autoPlay loop muted playsInline></video>
+
 
 ### كيف تحدد الإشعارات التي تحتاجها؟
 
@@ -247,6 +276,11 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
 ستجد داخل الصفحة رابط **كيفية الإعداد**، ويمكنك الرجوع إليه لمعرفة خطوات إعداد Firebase وتجهيز البيانات المطلوبة.
 
+
+   <video class="ashara-doc-video gif5-light" src={gif5Light} autoPlay loop muted playsInline></video>
+   <video class="ashara-doc-video gif5-dark" src={gif5} autoPlay loop muted playsInline></video>
+
+
 بعد تجهيز البيانات، أدخل المعلومات التالية:
 
 * **Project ID**
@@ -262,3 +296,5 @@ import { Aside, Steps } from '@astrojs/starlight/components';
   يُستخدم هذا الملف للسماح للمنصة بإرسال الإشعارات من خلال Firebase.
 
 بعد إدخال البيانات ورفع الملف، راجع حالة الإعداد الظاهرة في الصفحة للتأكد من اكتمال الإعداد.
+
+</div>
